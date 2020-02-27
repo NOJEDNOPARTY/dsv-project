@@ -1,0 +1,89 @@
+.wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.white-title {
+    padding-top: 27px;
+    padding-bottom: 24px;
+    margin-bottom: 27px;
+    background-color: #ffffff;
+    .title {margin-bottom: 0;}
+}
+
+.title {
+    position: relative;
+    margin-bottom: 24px;
+    padding-left: 13px;
+    font-family: 'HelveticaNeueCyr-Roman';
+    font-size: 30px;
+    line-height: 30px;
+    color: #616161;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 0;
+        display: block;
+        width: 4px;
+        height: 24px;
+        background-color: #00877C;
+    }
+}
+
+.slider {
+    .owl-dots {
+        position: absolute;
+        bottom: -36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        & button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 16px;
+            height: 16px;
+            border: 1px solid #8E8E8E;
+            border-radius: 50%;
+            box-sizing: border-box;
+            &:not(:last-child) {margin-right: 16px;}
+            & span {
+                display: block;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: #808080;
+                opacity: 0;
+                transition: 0.3s ease;
+            }
+            &.active span {opacity: 1;}
+        }
+    }
+    .owl-nav {
+        position: absolute;
+        top: calc(50% - 25px);
+        left: -66px;
+        z-index: -1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: calc(100% + 132px);
+        & .owl-prev {background-image: url( '../images/arrow-left.svg') !important;}
+        & .owl-next {background-image: url('../images/arrow-right.svg') !important;}
+        & button {
+            width: 50px;
+            height: 50px;
+            background-repeat: no-repeat !important;
+            background-position: center !important;
+            background-size: contain !important;
+            border-radius: 50%;
+            transition: 0.3s ease;
+            & span {display: none;}
+            &:hover {box-shadow: -1px 4px 4px rgba(0, 135, 124, 0.15);}
+        }
+    }
+}
