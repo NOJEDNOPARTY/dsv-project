@@ -1,31 +1,7 @@
 @font-face {
-  font-family: 'HelveticaNeueCyr-MediumItalic';
-  src: url("../css/fonts/helveticaneuecyr/HelveticaNeueCyr-MediumItalic.woff2") format("woff2"), url("../css/fonts/helveticaneuecyr/HelveticaNeueCyr-MediumItalic.woff") format("woff");
-  font-weight: 500;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'HelveticaNeueCyr-Black';
-  src: url("../css/fonts/helveticaneuecyr/HelveticaNeueCyr-Black.woff2") format("woff2"), url("../css/fonts/helveticaneuecyr/HelveticaNeueCyr-Black.woff") format("woff");
-  font-weight: 900;
-  font-style: normal; }
-
-@font-face {
   font-family: 'HelveticaNeueCyr-Roman';
   src: url("../css/fonts/helveticaneuecyr/HelveticaNeueCyr-Roman.woff2") format("woff2"), url("../css/fonts/helveticaneuecyr/HelveticaNeueCyr-Roman.woff") format("woff");
   font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'HelveticaNeueCyr-HeavyItalic.';
-  src: url("../css/fonts/helveticaneuecyr/HelveticaNeueCyr-HeavyItalic.woff2") format("woff2"), url("../css/fonts/helveticaneuecyr/HelveticaNeueCyr-HeavyItalic.woff") format("woff");
-  font-weight: 900;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'HelveticaNeueCyr-Light';
-  src: url("../css/fonts/helveticaneuecyr/HelveticaNeueCyr-Light.woff2") format("woff2"), url("../css/fonts/helveticaneuecyr/HelveticaNeueCyr-Light.woff") format("woff");
-  font-weight: 300;
   font-style: normal; }
 
 @font-face {
@@ -35,63 +11,9 @@
   font-style: normal; }
 
 @font-face {
-  font-family: 'HelveticaNeueCyr-Heavy';
-  src: url("../css/fonts/helveticaneuecyr/HelveticaNeueCyr-Heavy.woff2") format("woff2"), url("../css/fonts/helveticaneuecyr/HelveticaNeueCyr-Heavy.woff") format("woff");
-  font-weight: 900;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'HelveticaNeueCyr-BlackItalic';
-  src: url("../css/fonts/helveticaneuecyr/HelveticaNeueCyr-BlackItalic.woff2") format("woff2"), url("../css/fonts/helveticaneuecyr/HelveticaNeueCyr-BlackItalic.woff") format("woff");
-  font-weight: 900;
-  font-style: italic; }
-
-@font-face {
   font-family: 'HelveticaNeueCyr-Medium';
   src: url("../css/fonts/helveticaneuecyr/HelveticaNeueCyr-Medium.woff2") format("woff2"), url("../css/fonts/helveticaneuecyr/HelveticaNeueCyr-Medium.woff") format("woff");
   font-weight: 500;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'HelveticaNeueCyr-LightItalic';
-  src: url("../css/fonts/helveticaneuecyr/HelveticaNeueCyr-LightItalic.woff2") format("woff2"), url("../css/fonts/helveticaneuecyr/HelveticaNeueCyr-LightItalic.woff") format("woff");
-  font-weight: 300;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'HelveticaNeueCyr-BoldItali';
-  src: url("../css/fonts/helveticaneuecyr/HelveticaNeueCyr-BoldItalic.woff2") format("woff2"), url("../css/fonts/helveticaneuecyr/HelveticaNeueCyr-BoldItalic.woff") format("woff");
-  font-weight: bold;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'HelveticaNeueCyr-Thin';
-  src: url("../css/fonts/helveticaneuecyr/HelveticaNeueCyr-Thin.woff2") format("woff2"), url("../css/fonts/helveticaneuecyr/HelveticaNeueCyr-Thin.woff") format("woff");
-  font-weight: 100;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'HelveticaNeueCyr-Italic';
-  src: url("../css/fonts/helveticaneuecyr/HelveticaNeueCyr-Italic.woff2") format("woff2"), url("../css/fonts/helveticaneuecyr/HelveticaNeueCyr-Italic.woff") format("woff");
-  font-weight: normal;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'HelveticaNeueCyr-UltraLightItalic';
-  src: url("../css/fonts/helveticaneuecyr/HelveticaNeueCyr-UltraLightItalic.woff2") format("woff2"), url("../css/fonts/helveticaneuecyr/HelveticaNeueCyr-UltraLightItalic.woff") format("woff");
-  font-weight: 200;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'HelveticaNeueCyr-ThinItalic';
-  src: url("../css/fonts/helveticaneuecyr/HelveticaNeueCyr-ThinItalic.woff2") format("woff2"), url("../css/fonts/helveticaneuecyr/HelveticaNeueCyr-ThinItalic.woff") format("woff");
-  font-weight: 100;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'HelveticaNeueCyr-UltraLight';
-  src: url("../css/fonts/helveticaneuecyr/HelveticaNeueCyr-UltraLight.woff2") format("woff2"), url("../css/fonts/helveticaneuecyr/HelveticaNeueCyr-UltraLight.woff") format("woff");
-  font-weight: 200;
   font-style: normal; }
 
 html,
@@ -489,10 +411,10 @@ header {
         background: transparent;
         padding-top: 39px;
         box-shadow: 1px 4px 4px rgba(22, 109, 158, 0.14); }
-        header nav ul li .hidden-menu li {
+        header nav ul li .hidden-menu > li {
           display: flex;
           align-items: center;
-          justify-content: flex-start;
+          justify-content: space-between;
           width: 270px;
           height: 40px;
           padding: 0 16px;
@@ -500,11 +422,67 @@ header {
           font-family: 'HelveticaNeueCyr-Bold';
           background-color: #ffffff;
           transition: 0.3s ease; }
-          header nav ul li .hidden-menu li a {
+          header nav ul li .hidden-menu > li a {
             color: #616161; }
-          header nav ul li .hidden-menu li:hover {
+          header nav ul li .hidden-menu > li svg {
+            transition: 0.3s ease; }
+          header nav ul li .hidden-menu > li:hover {
             background: #EBEEC6;
             color: #616161; }
+            header nav ul li .hidden-menu > li:hover svg {
+              transform: rotate(180deg); }
+            header nav ul li .hidden-menu > li:hover .hidden-menu-second {
+              display: block; }
+        header nav ul li .hidden-menu .hidden-menu-second {
+          position: absolute;
+          top: 0;
+          left: 100%;
+          z-index: 3;
+          display: none;
+          width: 270px;
+          background: #FFFFFF;
+          padding: 16px;
+          box-shadow: 1px 4px 4px rgba(22, 109, 158, 0.14);
+          border-radius: 0 4px 4px 0; }
+          header nav ul li .hidden-menu .hidden-menu-second li {
+            margin: 0;
+            font-family: 'HelveticaNeueCyr-Bold';
+            transition: 0.3s ease; }
+            header nav ul li .hidden-menu .hidden-menu-second li > span {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              width: 100%;
+              padding-bottom: 16px; }
+            header nav ul li .hidden-menu .hidden-menu-second li a {
+              color: #616161; }
+            header nav ul li .hidden-menu .hidden-menu-second li svg {
+              transform: rotate(-90deg);
+              transition: 0.3s ease; }
+              header nav ul li .hidden-menu .hidden-menu-second li svg path {
+                transition: 0.3s ease; }
+            header nav ul li .hidden-menu .hidden-menu-second li:hover > a {
+              color: #00877C; }
+            header nav ul li .hidden-menu .hidden-menu-second li:hover svg {
+              transform: rotate(180deg); }
+              header nav ul li .hidden-menu .hidden-menu-second li:hover svg path {
+                fill: #00877C; }
+            header nav ul li .hidden-menu .hidden-menu-second li:hover .hidden-menu-third {
+              display: block;
+              padding-bottom: 16px; }
+            header nav ul li .hidden-menu .hidden-menu-second li .hidden-menu-third {
+              display: none;
+              padding-bottom: 0;
+              width: 100%; }
+              header nav ul li .hidden-menu .hidden-menu-second li .hidden-menu-third > li:not(:last-child) {
+                padding-bottom: 8px; }
+              header nav ul li .hidden-menu .hidden-menu-second li .hidden-menu-third li {
+                font-family: 'HelveticaNeueCyr-Roman';
+                transition: 0.3s ease; }
+                header nav ul li .hidden-menu .hidden-menu-second li .hidden-menu-third li a {
+                  text-transform: none; }
+                header nav ul li .hidden-menu .hidden-menu-second li .hidden-menu-third li:hover > a {
+                  color: #00877C; }
       header nav ul li:hover .hidden-menu {
         display: block; }
 

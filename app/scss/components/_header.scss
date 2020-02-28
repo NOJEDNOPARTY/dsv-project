@@ -62,10 +62,10 @@ header {
                     background: transparent;
                     padding-top: 39px;
                     box-shadow: 1px 4px 4px rgba(22, 109, 158, 0.14);
-                    & li {
+                    & > li {
                         display: flex;
                         align-items: center;
-                        justify-content: flex-start;
+                        justify-content: space-between;
                         width: 270px;
                         height: 40px;
                         padding: 0 16px;
@@ -74,9 +74,67 @@ header {
                         background-color: #ffffff;
                         transition: 0.3s ease;
                         & a {color: #616161;}
+                        & svg {transition: 0.3s ease;}
                         &:hover {
                             background: #EBEEC6;
                             color: #616161;
+                            & svg {transform: rotate(180deg);}
+                            & .hidden-menu-second {display: block;}
+                        }
+                    }
+                    & .hidden-menu-second {
+                        position: absolute;
+                        top: 0;
+                        left: 100%;
+                        z-index: 3;
+                        display: none;
+                        width: 270px;
+                        background: #FFFFFF;
+                        padding: 16px;
+                        box-shadow: 1px 4px 4px rgba(22, 109, 158, 0.14);
+                        border-radius: 0 4px 4px 0;
+                        & li {
+                            & > span {
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                width: 100%;
+                                padding-bottom: 16px;
+                            }
+                            margin: 0;
+                            font-family: 'HelveticaNeueCyr-Bold';
+                            transition: 0.3s ease;
+                            & a {color: #616161;}
+                            & svg {
+                                transform: rotate(-90deg);
+                                transition: 0.3s ease;
+                                & path {transition: 0.3s ease;}
+                            }
+                            &:hover {
+                                & > a {color: #00877C;}
+                                & svg {
+                                    transform: rotate(180deg);
+                                    & path {fill: #00877C;}
+                                }
+                                & .hidden-menu-third {
+                                    display: block;
+                                    padding-bottom: 16px;
+                                }
+                            }
+                            & .hidden-menu-third {
+                                display: none;
+                                padding-bottom: 0;
+                                width: 100%;
+                                & > li:not(:last-child) {padding-bottom: 8px;}
+                                & li {
+                                    font-family: 'HelveticaNeueCyr-Roman';
+                                    transition: 0.3s ease;
+                                    & a {text-transform: none;}
+                                    &:hover {
+                                        & > a {color: #00877C;}
+                                    }
+                                }
+                            }
                         }
                     }
                 }
