@@ -16,7 +16,7 @@ var common = {
 			nav: false,
 			dots: true,
 			lazyLoad: true,
-			// autoplay:true,
+			autoplay:true,
     		autoplayTimeout: 5000,
 			autoplayHoverPause:true,
 			responsive:{
@@ -38,9 +38,6 @@ var common = {
 			nav: true,
 			dots: true,
 			lazyLoad: true,
-			// autoplay:true,
-    		autoplayTimeout: 5000,
-			autoplayHoverPause:true,
 			responsive:{
 				0:{
 					items:1
@@ -59,9 +56,6 @@ var common = {
 			nav: true,
 			dots: false,
 			lazyLoad: true,
-			// autoplay:true,
-    		autoplayTimeout: 5000,
-			autoplayHoverPause:true,
 			responsive:{
 				0:{
 					items:1
@@ -71,6 +65,24 @@ var common = {
 				},
 				1000:{
 					items:3
+				}
+			}
+		})
+		$('.about-slider').owlCarousel({
+			loop:true,
+			margin: 0,
+			nav: true,
+			dots: false,
+			lazyLoad: true,
+			responsive:{
+				0:{
+					items:1
+				},
+				600:{
+					items:1
+				},
+				1000:{
+					items:1
 				}
 			}
 		})

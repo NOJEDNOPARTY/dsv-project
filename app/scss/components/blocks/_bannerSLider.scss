@@ -31,4 +31,12 @@
         text-transform: uppercase;
         color: #FFFFFF;
     }
+    & .owl-dots {
+        position: absolute;
+        bottom: 15px;
+        & button {
+            border: 2px solid #FFFFFF;
+            & span {background: #00877C;}
+        }
+    }
 }

@@ -1,5 +1,5 @@
 .products {
-    padding: 72px 0 108px;
+    padding: 70px 0 77px;
 }
 .products-item {
     position: relative;
@@ -7,10 +7,16 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    max-width: 270px;
-    max-height: 270px;
+    width: 270px;
+    min-width: 270px;
+    height: 270px;
+    overflow: hidden;
     border-radius: 4px;
     overflow: hidden;
+    & img {
+        width: 100%;
+        transition: 0.3s ease;
+    }
     &::before {
         content: '';
         position: absolute;
@@ -20,6 +26,11 @@
         width: 100%;
         height: 100%;
         background: rgba(22, 109, 158, 0.44);
+        transition: 0.3s ease;
+    }
+    &:hover {
+        &::before {background: rgba(22, 109, 158, 0.8);}
+        & img {transform: scale(1.15);}
     }
     & .products-title {
         position: absolute;

@@ -7,19 +7,22 @@
 
 .white-title {
     padding-top: 27px;
-    padding-bottom: 24px;
+    padding-bottom: 25px;
     margin-bottom: 27px;
     background-color: #ffffff;
     .title {margin-bottom: 0;}
 }
 
+.background-gray {background-color: #F3F3F3;}
+
 .title {
     position: relative;
-    margin-bottom: 24px;
+    margin-bottom: 26px;
     padding-left: 13px;
     font-family: 'HelveticaNeueCyr-Roman';
     font-size: 30px;
     line-height: 30px;
+    letter-spacing: 0.7px;
     color: #616161;
     &::before {
         content: '';
@@ -36,7 +39,7 @@
 .slider {
     .owl-dots {
         position: absolute;
-        bottom: -36px;
+        bottom: -34px;
         display: flex;
         align-items: center;
         justify-content: center;
