@@ -383,11 +383,13 @@ header {
       max-width: 100px;
       height: 40px;
       margin-right: 35px;
-      border: 1px solid rgba(255, 255, 255, 0.5);
+      border: 1px solid #BCCF00;
+      color: #BCCF00;
       box-sizing: border-box;
       border-radius: 2px; }
       header nav ul .nav-link-btn > a:hover {
-        border: 1px solid #BCCF00; }
+        border: 1px solid #ffffff;
+        color: #ffffff; }
     header nav ul li.active {
       position: relative; }
       header nav ul li.active::before {
@@ -442,8 +444,7 @@ header {
           width: 270px;
           background: #FFFFFF;
           padding: 16px;
-          box-shadow: 1px 4px 4px rgba(22, 109, 158, 0.14);
-          border-radius: 0 4px 4px 0; }
+          box-shadow: 1px 4px 4px rgba(22, 109, 158, 0.14); }
           header nav ul li .hidden-menu .hidden-menu-second li {
             margin: 0;
             font-family: 'HelveticaNeueCyr-Bold';
@@ -536,7 +537,7 @@ header {
       .header-left form .search-block:hover {
         border: 1px solid #BCCF00;
         box-sizing: border-box;
-        border-radius: 8px;
+        border-radius: 4px;
         overflow: hidden; }
         .header-left form .search-block:hover .search-field {
           min-width: 200px;
