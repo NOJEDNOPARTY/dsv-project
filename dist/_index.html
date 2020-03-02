@@ -373,7 +373,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li><a href="#">Каталоги</a></li>
+                        <li><a href="#" class="nav-link-catalog">Каталоги</a></li>
                         <li>
                             <a href="#">про DSV</a>
                             <ul class="hidden-menu">
@@ -385,9 +385,12 @@
                         <li><a href="#">DSV International</a></li>
                     </ul>
                 </nav>
-                <form action="#">
+                <form action="find.php">
                     <div class="search-block">
                         <input class="search-field" type="search" name="search" placeholder="Пошук продукту">
+                        <div class="search-btn">
+                            <img src="./images/search.svg" alt="search">
+                        </div>
                         <button>
                             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M20.6665 18.6666H19.6132L19.2399 18.3066C20.8399 16.44 21.6665 13.8933 21.2132 11.1866C20.5865 7.47998 17.4932 4.51998 13.7599 4.06665C8.11986 3.37331 3.37319 8.11998 4.06652 13.76C4.51986 17.4933 7.47986 20.5866 11.1865 21.2133C13.8932 21.6666 16.4399 20.84 18.3065 19.24L18.6665 19.6133V20.6666L24.3332 26.3333C24.8799 26.88 25.7732 26.88 26.3199 26.3333C26.8665 25.7866 26.8665 24.8933 26.3199 24.3466L20.6665 18.6666ZM12.6665 18.6666C9.34652 18.6666 6.66652 15.9866 6.66652 12.6666C6.66652 9.34665 9.34652 6.66665 12.6665 6.66665C15.9865 6.66665 18.6665 9.34665 18.6665 12.6666C18.6665 15.9866 15.9865 18.6666 12.6665 18.6666Z" fill="white"/>
@@ -446,17 +449,22 @@
             </div>
         </div>
     </header>
-    <div class="banner slider owl-carousel">
-        <div class="banner-item" style="background-image: url('./images/banner-item-1.jpg')">
-            <div class="banner-title">ДСВ – Інновації для Вашого успіху</div>
+    <section class="banner-section">
+        <div class="banner slider owl-carousel">
+            <div class="banner-item" style="background-image: url('./images/banner-item-1.jpg')">
+                <div class="banner-title">ДСВ – Інновації для Вашого успіху</div>
+            </div>
+            <div class="banner-item" style="background-image: url('./images/banner-item-2.jpg')">
+                <div class="banner-title">ДСВ – Інновації для Вашого успіху</div>
+            </div>
+            <div class="banner-item" style="background-image: url('./images/banner-item-3.jpg')">
+                <div class="banner-title">ДСВ – Інновації для Вашого успіху</div>
+            </div>
+            <div class="banner-item" style="background-image: url('./images/banner-item-3.jpg')">
+                <div class="banner-title">ДСВ – Інновації для Вашого успіху</div>
+            </div>
         </div>
-        <div class="banner-item" style="background-image: url('./images/banner-item-2.jpg')">
-            <div class="banner-title">ДСВ – Інновації для Вашого успіху</div>
-        </div>
-        <div class="banner-item" style="background-image: url('./images/banner-item-3.jpg')">
-            <div class="banner-title">ДСВ – Інновації для Вашого успіху</div>
-        </div>
-    </div>
+    </section>
     <section class="products">
         <div class="wrapper">
             <h2 class="title">Продукти</h2>
@@ -522,6 +530,14 @@
                     <span class="products-title">Озимий ячмінь</span >
                 </a>
             </div>
+            <div class="btn-wrap">
+                <a href="./news.html" class="btn btn-green">
+                    Всі продукти
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.31008 6.71002C8.92008 7.10002 8.92008 7.73002 9.31008 8.12002L13.1901 12L9.31008 15.88C8.92008 16.27 8.92008 16.9 9.31008 17.29C9.70008 17.68 10.3301 17.68 10.7201 17.29L15.3101 12.7C15.7001 12.31 15.7001 11.68 15.3101 11.29L10.7201 6.70002C10.3401 6.32002 9.70008 6.32002 9.31008 6.71002Z" fill="#616161"/>
+                    </svg>
+                </a>
+            </div>
         </div>
     </section>
     <section class="about-slider-wrap background-gray">
@@ -549,6 +565,14 @@
                     </div>
                 </div>
             </div>
+            <div class="btn-wrap">
+                <a href="./news.html" class="btn">
+                    Більше про нас
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.31008 6.71002C8.92008 7.10002 8.92008 7.73002 9.31008 8.12002L13.1901 12L9.31008 15.88C8.92008 16.27 8.92008 16.9 9.31008 17.29C9.70008 17.68 10.3301 17.68 10.7201 17.29L15.3101 12.7C15.7001 12.31 15.7001 11.68 15.3101 11.29L10.7201 6.70002C10.3401 6.32002 9.70008 6.32002 9.31008 6.71002Z" fill="#616161"/>
+                    </svg>
+                </a>
+            </div>
         </div>
     </section>
     <section class="news-list-block">
@@ -562,7 +586,7 @@
                     </svg>
                 </a>
             </div>
-            <div class="news-list">
+            <div class="news-list owl-carousel">
                 <div class="acticle-preview">
                     <a href="#" class="article-img"><img src="./images/article-img-1.jpg" alt="article-img"></a>
                     <div class="article-cnt">
@@ -602,6 +626,14 @@
                         </a>
                     </div>
                 </div>
+            </div>
+            <div class="btn-wrap">
+                <a href="./news.html" class="btn">
+                    Всі новини
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.31008 6.71002C8.92008 7.10002 8.92008 7.73002 9.31008 8.12002L13.1901 12L9.31008 15.88C8.92008 16.27 8.92008 16.9 9.31008 17.29C9.70008 17.68 10.3301 17.68 10.7201 17.29L15.3101 12.7C15.7001 12.31 15.7001 11.68 15.3101 11.29L10.7201 6.70002C10.3401 6.32002 9.70008 6.32002 9.31008 6.71002Z" fill="#616161"/>
+                    </svg>
+                </a>
             </div>
         </div>
     </section>
@@ -806,6 +838,14 @@
                     </a>
                     <a data-fancybox="" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="videos-cnt"><span>WOSR DSV UA</span></a>
                 </div>
+            </div>
+            <div class="btn-wrap">
+                <a href="./news.html" class="btn">
+                    Всі відео
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.31008 6.71002C8.92008 7.10002 8.92008 7.73002 9.31008 8.12002L13.1901 12L9.31008 15.88C8.92008 16.27 8.92008 16.9 9.31008 17.29C9.70008 17.68 10.3301 17.68 10.7201 17.29L15.3101 12.7C15.7001 12.31 15.7001 11.68 15.3101 11.29L10.7201 6.70002C10.3401 6.32002 9.70008 6.32002 9.31008 6.71002Z" fill="#616161"/>
+                    </svg>
+                </a>
             </div>
         </div>
     </section>

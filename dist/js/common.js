@@ -6,7 +6,17 @@ var common = {
 	main: function(){
 
 		var bLazy = new Blazy({});
-
+		 
+		$('.search-block').click( function(e){
+			$(this).addClass('search-open');
+		});
+		$(document).mouseup(function (e){ 
+			var block = $(".search-block"); 
+			if (!block.is(e.target)
+				&& block.has(e.target).length === 0) { 
+				block.removeClass('search-open');
+			}
+		});
 	},
 	carousel: function(){
 
@@ -21,13 +31,38 @@ var common = {
 			autoplayHoverPause:true,
 			responsive:{
 				0:{
-					items:1
+					items: 1,
+					margin: 0
 				},
-				600:{
-					items:1
+				401:{
+					items: 3,
+					margin: 10
 				},
-				1000:{
+				768:{
 					items:1
+				}
+			}
+		});
+		$('.news-list').owlCarousel({
+			loop:true,
+			margin: 22,
+			nav: false,
+			dots: false,
+			lazyLoad: true,
+			autoplay:true,
+			autoplayTimeout: 5000,
+			autoplayHoverPause:true,
+			responsive:{
+				0:{
+					items: 1,
+					margin: 0
+				},
+				361:{
+					items:2,
+					margin: 19
+				},
+				768:{
+					items: 3
 				}
 			}
 		});
@@ -38,14 +73,15 @@ var common = {
 			nav: true,
 			dots: true,
 			lazyLoad: true,
+			autoplay:true,
+			autoplayTimeout: 5000,
+			autoplayHoverPause:true,
 			responsive:{
 				0:{
-					items:1
+					items:3,
+					margin: 20
 				},
-				600:{
-					items:2
-				},
-				1000:{
+				768:{
 					items:4
 				}
 			}
@@ -56,15 +92,18 @@ var common = {
 			nav: true,
 			dots: false,
 			lazyLoad: true,
+			autoplay:true,
+			autoplayTimeout: 5000,
+			autoplayHoverPause:true,
 			responsive:{
 				0:{
 					items:1
 				},
-				600:{
+				415:{
 					items:2
 				},
-				1000:{
-					items:3
+				670:{
+					items:3,
 				}
 			}
 		})
@@ -79,9 +118,6 @@ var common = {
 					items:1
 				},
 				600:{
-					items:1
-				},
-				1000:{
 					items:1
 				}
 			}

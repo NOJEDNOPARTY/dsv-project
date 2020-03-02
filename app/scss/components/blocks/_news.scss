@@ -1,4 +1,8 @@
-.news-list-block {padding: 70px 0 45px;}
+.news-list-block {
+    padding: 70px 0 66px;
+    @media(max-width: 992px) {padding: 0 0 66px}
+    .wrapper {overflow: hidden;}
+}
 .news-head {
     display: flex;
     align-items: center;
@@ -15,6 +19,7 @@
         letter-spacing: 0.4px;
         color: #616161;
         transition: 0.3s ease;
+        @media(max-width: 767px) {display: none;}
         & svg path {transition: 0.3s ease;}
         &:hover {
             color: #00877C;
@@ -23,32 +28,51 @@
     }
 }
 .news-list {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-flow: row wrap;
+    margin-left: -5px;
+    width: 1180px;
+    @media(max-width: 767px) {width: 767px;}
+    @media(max-width: 700px) {width: 699px;}
+    @media(max-width: 360px) { 
+        width: calc(100% + 10px);
+        padding: 0 6px;
+    }
     & .acticle-preview {
         width: 100%;
         max-width: 370px;
         box-shadow: 0px 4px 4px rgba(0, 135, 124, 0.15);
         border-radius: 4px;
         overflow: hidden;
+        margin: 0 5px 16px;
+        @media(max-width: 360px) {
+            max-width: 340px;
+            margin: 0 0 16px;
+        }
         & .article-img {
             display: block;
             width: 100%;
             max-height: 298px;
+            @media(max-width: 767px) {
+                overflow: hidden;
+                max-height: 200px;
+            }
             & img {width: 100%;}
         }
         & .article-cnt {
             display: block;
             width: 100%;
             padding: 16px 15px;
+            @media(max-width: 767px){padding: 7px 15px 24px;}
             & .article-date {
                 padding-bottom: 7px;
                 font-family: 'HelveticaNeueCyr-Roman';
                 font-size: 14px;
                 line-height: 14px;
                 color: rgba(0, 0, 0, 0.4);
+                @media(max-width: 767px) {
+                    padding-bottom: 11px;
+                    font-size: 16px;
+                    line-height: 16px;
+                }
             }
             & .article-title {
                 display: -webkit-box;
@@ -62,6 +86,10 @@
                 line-height: 26px;
                 color: #616161;
                 transition: 0.3s ease;
+                @media(max-width: 767px) {    
+                    margin-bottom: 13px;
+                    line-height: 24px;
+                }
                 &:hover {color: #00877C;}
             }
             & .article-link {

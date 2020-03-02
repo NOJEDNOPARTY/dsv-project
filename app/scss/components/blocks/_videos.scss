@@ -1,6 +1,12 @@
 .videos {
   margin-bottom: 120px;
   padding: 0 0 27px;
+  .wrapper {
+    @media(max-width: 992px) {overflow: hidden;}
+  }
+  .white-title {
+    @media(max-width: 767px) {margin-bottom: 24px;}
+  }
 }
 
 .videos-slider {
@@ -8,6 +14,19 @@
   max-width: 1130px;
   margin: 0 auto;
   padding: 0 80px;
+  @media(max-width: 1330px) {max-width: 100%;}
+  @media(max-width: 992px) {
+    width: 952px;
+    max-width: 952px;
+  }
+  @media(max-width: 669px) {
+    width: 630px;
+    max-width: 630px;
+  }
+  @media(max-width:414px) {
+    width: 100%;
+    max-width: 100%;
+  }
   .owl-nav {
       width: 100%;
       left: 0;
@@ -18,6 +37,7 @@
 .videos-item {
   width: 100%;
   max-width: 300px;
+  @media(max-width:414px) { max-width: 414px; }
   .videos-preview {
     position: relative;
     display: block;
@@ -26,6 +46,7 @@
     overflow: hidden;
     border-radius: 4px 4px 0 0;
     overflow: hidden;
+    @media(max-width:767px) { max-height: 243px; }
     & img {
       width: 100%;
       transition: 0.3s ease;
@@ -53,6 +74,10 @@
       & .videos-preview-layout {opacity: 1;}
       & img {transform: scale(1.15);}
     }
+    @media(max-width: 1024px) {
+      & .videos-preview-layout {opacity: 1;}
+      & img {transform: scale(1.15);}
+    }
   }
   .videos-cnt {
     display: block;
@@ -60,6 +85,7 @@
     background-color: #FFFFFF;
     padding: 17px 12px 14px 8px;
     transition: 0.3s ease;
+    @media(max-width:767px) { padding: 22px 12px 48px 10px; }
     & span {
       display: -webkit-box;
       -webkit-line-clamp: 2;

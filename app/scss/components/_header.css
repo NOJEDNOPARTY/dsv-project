@@ -23,6 +23,12 @@ header nav ul a {
   color: #ffffff;
   transition: 0.3s ease;
 }
+@media (max-width: 1100px) {
+  header nav ul a {
+    font-size: 12px;
+    line-height: 12px;
+  }
+}
 header nav ul a:hover {
   color: #bccf00;
 }
@@ -37,14 +43,14 @@ header nav ul .nav-link-btn > a {
   max-width: 100px;
   height: 40px;
   margin-right: 35px;
-  border: 1px solid #bccf00;
-  color: #bccf00;
+  border: 1px solid #ffffff;
+  color: #ffffff;
   box-sizing: border-box;
   border-radius: 2px;
 }
 header nav ul .nav-link-btn > a:hover {
-  border: 1px solid #ffffff;
-  color: #ffffff;
+  border: 1px solid #bccf00;
+  color: #bccf00;
 }
 header nav ul li.active {
   position: relative;
@@ -185,6 +191,12 @@ header
 header nav ul li:hover .hidden-menu {
   display: block;
 }
+header nav ul .nav-link-catalog {
+  color: #bccf00;
+}
+header nav ul .nav-link-catalog:hover {
+  color: #ffffff;
+}
 .header-left {
   display: flex;
   align-items: center;
@@ -208,7 +220,7 @@ header nav ul li:hover .hidden-menu {
   justify-content: center;
   border-left: 1px solid #bccf00;
   height: 40px;
-  transition: 0.3s linear;
+  transition: 0.2s linear;
 }
 .header-left form .search-block .search-field {
   width: 0;
@@ -223,6 +235,19 @@ header nav ul li:hover .hidden-menu {
   font-size: 14px;
   line-height: 14px;
   color: #c4c4c4;
+  transition: 0.35s ease;
+}
+.header-left form .search-block .search-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+  overflow: hidden;
+}
+.header-left form .search-block .search-btn img {
+  height: 40px;
+  width: 32px;
+  overflow: hidden;
   transition: 0.3s ease;
 }
 .header-left form .search-block button {
@@ -230,10 +255,14 @@ header nav ul li:hover .hidden-menu {
   align-items: center;
   justify-content: center;
   height: 40px;
-  width: 32px;
-  min-width: 32px;
+  width: 0;
+  overflow: hidden;
+  min-width: 0;
   background: transparent;
   transition: 0.3s ease;
+}
+.header-left form .search-block button svg {
+  width: 0;
 }
 .header-left form .search-block button svg,
 .header-left form .search-block button svg path {
@@ -242,27 +271,49 @@ header nav ul li:hover .hidden-menu {
 .header-left form .search-block button:hover svg path {
   fill: #bccf00;
 }
-.header-left form .search-block:hover {
+.header-left form .search-block:hover,
+.header-left form .search-block.search-open {
   border: 1px solid #bccf00;
   box-sizing: border-box;
   border-radius: 4px;
   overflow: hidden;
+  background: #ffffff;
 }
-.header-left form .search-block:hover .search-field {
+.header-left form .search-block:hover .search-field,
+.header-left form .search-block.search-open .search-field {
   min-width: 200px;
   padding: 13px 16px;
   opacity: 1;
   background: #ffffff;
 }
-.header-left form .search-block:hover button {
+@media (max-width: 1100px) {
+  .header-left form .search-block:hover .search-field,
+  .header-left form .search-block.search-open .search-field {
+    min-width: 150px;
+    padding: 13px 10px;
+  }
+}
+.header-left form .search-block:hover button,
+.header-left form .search-block.search-open button {
   min-width: 70px;
   background: #bccf00;
 }
-.header-left form .search-block:hover button:hover svg {
+.header-left form .search-block:hover button svg,
+.header-left form .search-block.search-open button svg {
+  width: 32px;
+}
+.header-left form .search-block:hover button:hover svg,
+.header-left form .search-block.search-open button:hover svg {
   transform: scale(1.05);
 }
-.header-left form .search-block:hover button:hover svg path {
+.header-left form .search-block:hover button:hover svg path,
+.header-left form .search-block.search-open button:hover svg path {
   fill: #ffffff;
+}
+.header-left form .search-block:hover .search-btn img,
+.header-left form .search-block.search-open .search-btn img {
+  opacity: 0;
+  width: 0;
 }
 .header-right {
   display: flex;
@@ -271,4 +322,10 @@ header nav ul li:hover .hidden-menu {
 }
 .header-right .header-slogan:nth-child(1) {
   margin-right: 15px;
+}
+@media (max-width: 1190px) {
+  .header-right .header-slogan svg {
+    width: 79px;
+    height: 47px;
+  }
 }

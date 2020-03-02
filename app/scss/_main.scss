@@ -1,8 +1,8 @@
 .wrapper {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1210px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 20px;
 }
 
 .white-title {
@@ -11,9 +11,16 @@
     margin-bottom: 27px;
     background-color: #ffffff;
     .title {margin-bottom: 0;}
+    @media(max-width: 1025px) {
+        margin-bottom: 33px;
+        padding: 0;
+    }
 }
 
-.background-gray {background-color: #F3F3F3;}
+.background-gray {
+    background-color: #F3F3F3;
+    @media(max-width: 1025px) {background-color: #ffffff;}
+}
 
 .title {
     position: relative;
@@ -24,6 +31,11 @@
     line-height: 30px;
     letter-spacing: 0.7px;
     color: #616161;
+    @media(max-width: 767px) {
+        margin-bottom: 33px;
+        padding-left: 0;
+        letter-spacing: 0.3px;
+    }
     &::before {
         content: '';
         position: absolute;
@@ -33,10 +45,15 @@
         width: 4px;
         height: 24px;
         background-color: #00877C;
+        @media(max-width: 767px) {
+            display: none;
+        }
     }
 }
 
 .slider {
+    @media(max-width: 1330px) {&:not(.banner){padding: 0 66px;}}
+    @media(max-width: 992px) {&:not(.banner){padding: 0px;}}
     .owl-dots {
         position: absolute;
         bottom: -34px;
@@ -44,6 +61,8 @@
         align-items: center;
         justify-content: center;
         width: 100%;
+        left: 0;
+        @media(max-width: 992px) {display: none;}
         & button {
             display: flex;
             align-items: center;
@@ -75,6 +94,11 @@
         align-items: center;
         justify-content: space-between;
         width: calc(100% + 132px);
+        @media(max-width: 1330px) {
+            left: 0;
+            width: 100%;
+        }
+        @media(max-width: 992px) {display: none;}
         & .owl-prev {background-image: url( '../images/arrow-left.svg') !important;}
         & .owl-next {background-image: url('../images/arrow-right.svg') !important;}
         & button {
