@@ -55,20 +55,21 @@
     padding-left: 0px;
     color: #00877C;
     text-align: center;
-    @media(max-width: 767px) {
-        margin-bottom: 33px;
-        padding-left: 0;
-        letter-spacing: 0.3px;
-    }
     &::before {
         top: auto;
-        bottom: -26px;
+        bottom: -22px;
         left: 50%;
         transform: translateX(-50%);
         display: block;
         width: 170px;
         height: 2px;
         background-color: #00877C;
+    }
+    @media(max-width: 767px) {
+        margin-bottom: 16px;
+        padding-left: 0;
+        letter-spacing: 0.3px;
+        &::before {display: none;}
     }
 }
 
@@ -135,3 +136,14 @@
         }
     }
 }
+// footer to the bottom code
+html,
+body {
+    display: flex;
+	flex-direction: column;
+	height: 100%;
+	min-height: 100%;
+	flex: 1 0 auto;
+}
+.main {flex: 1 0 auto;}
+footer {flex: 0 0 auto;}

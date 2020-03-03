@@ -45,8 +45,9 @@
     align-items: flex-start;
     justify-content: space-between;
     flex-flow: row wrap;
+    padding-top: 48px;
     @media(max-width: 1150px) {justify-content: space-around;}
-    @media(max-width: 992px) {padding-top: 33px;}
+    @media(max-width: 992px) {padding-top: 24px;}
 }
 .acticle-preview {
     width: 100%;

@@ -1,0 +1,40 @@
+.brands-section {padding: 32px 0;}
+
+.brands{
+    padding-top: 23px;
+    @media(max-width: 767px) {padding-top: 0;}
+    & .brand {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 774px;
+        margin: 0 auto;
+        &:not(:last-child) {padding-bottom: 56px;}
+        @media(max-width: 767px) {
+            flex-direction: column;
+            &:not(:last-child) {padding-bottom: 27px;}
+        }
+        &-img {
+            display: block;
+            width: 100%;
+            max-width: 270px;
+            margin-right: 10px;
+            @media(max-width: 767px) {margin: 0 0 30px;}
+            & img {width: 100%;}
+        }
+        &-cnt {
+            width: 100%;
+            max-width: 369px;
+            font-family: 'HelveticaNeueCyr-Roman';
+            font-size: 14px;
+            line-height: 22px;
+            color: #000000;
+            & span {color: #00877C;}
+            @media(max-width: 767px) {
+                text-align: center;
+                & br {display: none;}
+            }
+        }
+    }
+}

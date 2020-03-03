@@ -92,18 +92,12 @@
             transition: 0.3s ease;
         }
     }
-    &:hover {
-        &::before {background: rgba(22, 109, 158, 0.8);}
-        & img {transform: scale(1.15);}
-        .products-title:before,
-        .products-title:after {opacity: 1;}
-    }
     @media(min-width: 1024px) {
         &:hover {
-            &::before {background: rgba(22, 109, 158, 0.44);}
+            &::before {background: rgba(22, 109, 158, 0.8);}
+            & img {transform: scale(1.15);}
+            .products-title:before,
+            .products-title:after {opacity: 1;}
         }
-        & img {transform: scale(1.15);}
-        .products-title:before,
-        .products-title:after {opacity: 1;}
     }
 }
