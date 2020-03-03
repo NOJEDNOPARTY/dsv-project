@@ -1,12 +1,31 @@
 var common = {
 	init: function() {
+		common.fixNavigation();
 		common.main();
 		common.carousel();
+	},
+	fixNavigation: function(){
+		function fixPanel() {
+			if ($(window).scrollTop() > 0) {
+				$('header').addClass('fixed');
+				$('body').css({'margin-top':$('header').height()})
+			}else {
+				$('header').removeClass('fixed')
+				$('body').css({'margin-top':0})
+			}
+		};
+		fixPanel();
+		$(window).scroll(function() {
+			if($(window).width() < 993) {
+				fixPanel();
+			}
+		});
 	},
 	main: function(){
 
 		var bLazy = new Blazy({});
-		
+
+				
 		$('.menu-trigger').click(function(event){
 			event.preventDefault();
 			$('nav').addClass('open');
@@ -55,6 +74,7 @@ var common = {
 				&& nav.has(e.target).length === 0) { 
 				nav.removeClass('open');
 				$('.header-left').removeClass('menu-open');
+				$('.hidden-menu').closest('li').removeClass('active');
 			}
 		});
 	},
@@ -83,6 +103,9 @@ var common = {
 				}
 			}
 		});
+		$('.owl-carousel').on('changed.owl.carousel', function(event) {
+			var bLazy = new Blazy({});
+		})
 		$('.owl-carousel').trigger('refresh.owl.carousel');
 		$('.news-list').owlCarousel({
 			loop:true,

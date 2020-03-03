@@ -51,15 +51,15 @@
         text-align: center;
         text-transform: uppercase;
         color: #FFFFFF;
-        @media(min-width: 1101px) {
-            top: 123px;
-            font-size: 24px;
-            line-height: 34px;
-        }
         @media(min-width: 993px) {
             top: 85px;
             font-size: 18px;
             line-height: 24px;
+        }
+        @media(min-width: 1101px) {
+            top: 123px;
+            font-size: 24px;
+            line-height: 34px;
         }
         &::before {
             content: '';
@@ -75,8 +75,8 @@
             background-size: contain;
             opacity: 0.86;
             transition: 0.3s ease;
-            @media(min-width: 1101px) {top: -74px;}
             @media(min-width: 993px) {top: -60px;}
+            @media(min-width: 1101px) {top: -74px;}
         }
         &:after {
             content: '';

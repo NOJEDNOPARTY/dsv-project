@@ -50,6 +50,27 @@
         }
     }
 }
+.page-title {
+    width: 100%;
+    padding-left: 0px;
+    color: #00877C;
+    text-align: center;
+    @media(max-width: 767px) {
+        margin-bottom: 33px;
+        padding-left: 0;
+        letter-spacing: 0.3px;
+    }
+    &::before {
+        top: auto;
+        bottom: -26px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: block;
+        width: 170px;
+        height: 2px;
+        background-color: #00877C;
+    }
+}
 
 .slider {
     @media(max-width: 1330px) {&:not(.banner){padding: 0 66px;}}

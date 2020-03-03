@@ -2,6 +2,13 @@ header {
     position: relative;
     padding: 23px 0;
     background-color: #00877C;
+    &.fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        width: 100%;
+    }
     @media(max-width: 992px) {padding: 14px 0;}
     & .wrapper {
         display: flex;
@@ -26,9 +33,12 @@ header {
                 transform: translateX(0);
             }
         }
-        & ul > li svg,
+        
         & .mobile-links,
-        & .hidden-menu-title {display: none;}
+        & ul li .hidden-menu > li.hidden-menu-title {display: none;}
+        @media(min-width: 993px) {
+            &  > ul > li > span svg {display: none;}
+        }
         ul {
             display: flex;
             align-items: center;
@@ -50,7 +60,7 @@ header {
                 @media(min-width: 992px) {&:hover {color: #BCCF00;}}
             }
             & li:not(:last-child) {margin-right: 9px;} 
-            & .nav-link-btn > a{
+            & .nav-link-btn > span a{
                 @media(min-width: 992px) {
                     display: flex;
                     align-items: center;
@@ -58,7 +68,8 @@ header {
                     width: 100%;
                     max-width: 100px;
                     height: 40px;
-                    margin-right: 35px;
+                    padding: 0 9px;
+                    margin-right: 20px;
                     border: 1px solid #ffffff;
                     color: #ffffff;
                     box-sizing: border-box;
@@ -225,7 +236,7 @@ header {
         @media(max-width: 992px) {display: none;}
     }
     & form {
-        padding-left: 30px;
+        padding-left: 17px;
         @media(max-width: 992px) {
             max-width: 308px;
             width: 100%;
@@ -240,7 +251,6 @@ header {
             border-left: 1px solid #BCCF00;
             height: 40px;
             transition: 0.2s linear;
-            border: 1px solid transparent;
             @media(max-width: 992px) {
                 justify-content: flex-start;
                 border-left: none;
@@ -267,6 +277,7 @@ header {
                 transition: 0.3s ease;
                 overflow: hidden;
                 height: 40px;
+                width: 32px;
                 @media(max-width: 992px) {
                     min-width: 65px;
                     position: absolute;
@@ -335,6 +346,7 @@ header {
                         }
                     }
                     & .search-btn {
+                        width: 0;
                         & img {
                             opacity: 0;
                             width: 0;
@@ -477,7 +489,7 @@ header {
     header nav  ul {
         flex-direction: column;
         align-items: flex-start;
-        padding: 11px 45px 47px 20px;
+        padding: 11px 45px 60px 20px;
         margin: 0;
         & li{
             width: 100%;
@@ -536,7 +548,7 @@ header {
                 align-items: center;
                 justify-content: center;
                 width: 50px;
-                height: 50px;git s
+                height: 50px;
                 margin-right: 34px;
                 border: 2px solid #E5E5E5;
                 background: transparent;
@@ -554,7 +566,7 @@ header {
         height: 100vh;
         width: 100%;
         max-width: 414px;
-        padding: 16px 20px;
+        padding: 25px 20px 60px;
         background: #ffffff;
         overflow: scroll;
         box-shadow: none;
