@@ -54,10 +54,10 @@
     box-shadow: 0px 4px 4px rgba(0, 135, 124, 0.15);
     border-radius: 4px;
     overflow: hidden;
-    margin: 0 5px 16px;
+    margin: 0 5px 32px;
     @media(max-width: 360px) {
         max-width: 340px;
-        margin: 0 0 16px;
+        margin: 0 0 32px;
     }
     & .article-img {
         display: block;
