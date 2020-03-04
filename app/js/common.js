@@ -62,6 +62,10 @@ var common = {
 			$(".search-block").removeClass('search-open');
 			$('.header-slogan-mobile').removeClass('hidden');
 		});
+		
+		$('.filter-trigger').click( function(e){
+			$(this).closest('.catalog-filter').toggleClass('open');
+		});
 		$(document).mouseup(function (e){ 
 			var block = $(".search-block"); 
 			var nav = $("nav"); 

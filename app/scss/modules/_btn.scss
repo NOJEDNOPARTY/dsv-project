@@ -46,6 +46,11 @@
                 fill: #ffffff;
             }
         }
+        &-small {
+            height: 40px;
+            font-size: 14px;
+            line-height: 14px;
+        }
         @media(min-width: 1025px) {
             transition: 0.3s ease;
             &:hover {

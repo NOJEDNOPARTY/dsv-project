@@ -1,0 +1,153 @@
+.catalog-section {padding: 32px 0;}
+
+.catalog{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-top: 69px;
+    @media(max-width: 992px) {padding-top: 24px;}
+    &-cnt {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-flow: row wrap;
+        width: 100%;
+        max-width: 898px;
+        margin-right: -29px;
+        @media(max-width: 1250px) {
+            max-width: 869px;
+            margin-right: 0px;
+            justify-content: space-around;
+        }
+    }
+    &-item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 270px;
+        height: 382px;
+        margin-bottom: 40px;
+        margin-right: 29px;
+        border-radius: 4px;
+        overflow: hidden;
+        @media(max-width: 1250px) {margin-right: 0px;}
+        @media(max-width: 992px) {margin: 0 5px 24px;}
+        @media(max-width: 600px) {
+            max-width: 177px;
+            height: 251px;
+        }
+        cursor: pointer;
+        &-img,
+        &-img img {width: 100%;}
+        &-cnt {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 190px;
+            padding: 18px 15px 34px;
+            background: rgba(255, 255, 255, 0.96);
+            transition: 0.3s ease;
+            opacity: 0;
+            transform: translateY(190px);
+            @media(max-width: 992px) {display: none;}
+            & p {
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                overflow: hidden;
+                -webkit-box-orient: vertical;
+                margin-bottom: 23px;
+                font-family: 'HelveticaNeueCyr-Roman';
+                font-size: 18px;
+                line-height: 140%;
+                letter-spacing: 0.3px;
+                color: rgba(0, 0, 0, 0.9);
+                @media(max-width: 992px) {
+                    font-size: 12px;
+                    & br {display: none;}
+                }
+            }
+        }
+        &:hover {
+            & .catalog-item-cnt {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+    }
+    &-filter{
+        width: 100%;
+        max-width: 270px;
+        margin-right: 30px;
+        padding: 22px 5px 11px 17px;
+        background: #FAF9F9;
+        box-shadow: 0px 4px 4px rgba(0, 135, 124, 0.08);
+        border-radius: 4px;
+        @media(max-width: 992px) {display: none;}
+        & form {
+            width: 100%;
+            & p {
+                padding-bottom: 19px;
+                font-family: 'HelveticaNeueCyr-Roman';
+                font-size: 18px;
+                line-height: 140%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                color: #000000;
+                cursor: pointer;
+            }
+            & .filter-trigger img { transition: 0.3s ease;}
+            & label {display: none;}
+        }
+        &.open form label {display: flex;}
+        &.open form .filter-trigger img {transform: rotate(-180deg);}
+    }
+}
+
+
+
+.checkbox-item {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 330px;
+    padding: 0 0 22px;
+    & input {display: none;}
+    & .checker {
+        position: relative;
+        width: 16px;
+        min-width: 16px;
+        height: 16px;
+        margin-right: 8px;
+        border: 1px solid #C4C4C4;
+        transition: 0.3s ease;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: #00877C;
+            transition: 0.3s ease;
+            opacity: 0;
+        }
+    }
+    & .checker-name {
+        font-family: 'HelveticaNeueCyr-Roman';
+        font-size: 18px;
+        line-height: 18px;
+        letter-spacing: 1px;
+        color: #616161;
+    }
+}
+.checkbox-item input:checked + .checker{
+    border: 1px solid #00877C;
+    &:before {opacity: 1;}
+}
