@@ -49,6 +49,27 @@
             display: none;
         }
     }
+    &.title-green {
+        &::before {background-color: #BCCF00;}
+    }
+}
+.page-title-big {
+    margin-bottom: 41px;
+    padding-left: 0px;
+    font-family: 'HelveticaNeueCyr-Bold';
+    font-size: 62px;
+    line-height: 58px;
+    text-align: left;
+    color: #00877C;
+    &::before {display: none;}
+    @media(max-width: 992px) {
+        text-align: center;
+        margin-bottom: 25px;
+        padding-left: 0;
+        letter-spacing: 0.3px;
+        font-size: 40px;
+        line-height: 40px;
+    }
 }
 .page-title {
     width: 100%;
