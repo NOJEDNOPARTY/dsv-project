@@ -62,9 +62,19 @@ var common = {
 			$(".search-block").removeClass('search-open');
 			$('.header-slogan-mobile').removeClass('hidden');
 		});
-		
+
 		$('.filter-trigger').click( function(e){
 			$(this).closest('.catalog-filter').toggleClass('open');
+		});
+
+		$('.table-cnt-trigger').click( function(e){
+			e.preventDefault();
+			$(this).closest('.product-table-wrap').find('.product-table').addClass('open');
+		});
+		
+		$('.table-cnt-close').click( function(e){
+			e.preventDefault();
+			$(this).closest('.product-table-wrap').find('.product-table').removeClass('open');
 		});
 		$(document).mouseup(function (e){ 
 			var block = $(".search-block"); 
