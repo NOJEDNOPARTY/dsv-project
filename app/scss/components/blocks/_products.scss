@@ -220,12 +220,16 @@
         }
     }
 }
-
+.product-card-section {
+    padding: 0 0 72px;
+    @media(max-width: 992px) {padding: 32px 0;}
+}
 .product-card-head{
     padding-top: 40px;
     padding-bottom: 20px;
     &.product-card-head-mob,
-    .product-card-head-pdf {display: none;}
+    .product-card-head-pdf,
+    .btn {display: none;}
     @media(max-width: 992px) {
         display: flex;
         flex-direction: column;
@@ -241,6 +245,7 @@
         }
         &.product-card-head-mob,
         .product-card-head-pdf {display: block;}
+        .btn  {display: flex;}
     }
     & .product-card-headings {
         display: flex;
@@ -275,10 +280,12 @@
     }
 }
 
-.product-section {
-    .banner-title {
+.product-card-section {
+    .product-banner {
         @media(max-width: 992px) {
-            display:none;
+            margin: 0 20px;
+            width: calc(100% - 40px);
+            .banner-title {display:none;}
         }
     }
 }
@@ -313,6 +320,9 @@
     &-table {
         width: 100%;
         max-width: 530px;
+        &.product-card-table-mob {
+            & img{display: none;}
+        }
         @media(max-width: 992px) {
             & img{display: none;}
             margin: 0 auto;
@@ -346,7 +356,6 @@
         }
         &-info {
             margin-right: 10px;
-            order: 2;
             @media(max-width: 992px){
                 display: flex;
                 align-items: center;
@@ -354,6 +363,7 @@
                 width: 100%;
                 max-width: 374px;
                 margin: 0 auto 32px;
+                order: 2;
             }
             .btn-pdf-big{
                 max-width: 170px;
@@ -423,7 +433,6 @@
             justify-content: center;
             width: 100%;
             max-width: 584px;
-            order: 1;
             padding: 19px 54px 12px 77px;
             background-color: #D1D3D5;
             border-radius: 4px;
@@ -433,6 +442,7 @@
                 padding: 0;
                 border-radius: 0px;
                 background-color:transparent;
+                order: 1;
             }
         }
     }

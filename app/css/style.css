@@ -1391,11 +1391,18 @@ header {
     .product-table-wrap .btn {
       display: flex; } }
 
+.product-card-section {
+  padding: 0 0 72px; }
+  @media (max-width: 992px) {
+    .product-card-section {
+      padding: 32px 0; } }
+
 .product-card-head {
   padding-top: 40px;
   padding-bottom: 20px; }
   .product-card-head.product-card-head-mob,
-  .product-card-head .product-card-head-pdf {
+  .product-card-head .product-card-head-pdf,
+  .product-card-head .btn {
     display: none; }
   @media (max-width: 992px) {
     .product-card-head {
@@ -1413,7 +1420,9 @@ header {
         display: none; }
       .product-card-head.product-card-head-mob,
       .product-card-head .product-card-head-pdf {
-        display: block; } }
+        display: block; }
+      .product-card-head .btn {
+        display: flex; } }
   .product-card-head .product-card-headings {
     display: flex;
     align-items: flex-start;
@@ -1446,8 +1455,11 @@ header {
             width: 100%; } }
 
 @media (max-width: 992px) {
-  .product-section .banner-title {
-    display: none; } }
+  .product-card-section .product-banner {
+    margin: 0 20px;
+    width: calc(100% - 40px); }
+    .product-card-section .product-banner .banner-title {
+      display: none; } }
 
 .product-card {
   display: flex;
@@ -1478,6 +1490,8 @@ header {
   .product-card-table {
     width: 100%;
     max-width: 530px; }
+    .product-card-table.product-card-table-mob img {
+      display: none; }
     @media (max-width: 992px) {
       .product-card-table {
         margin: 0 auto; }
@@ -1508,8 +1522,7 @@ header {
         align-items: center;
         padding-bottom: 16px; } }
     .product-card-cnt-info {
-      margin-right: 10px;
-      order: 2; }
+      margin-right: 10px; }
       @media (max-width: 992px) {
         .product-card-cnt-info {
           display: flex;
@@ -1517,7 +1530,8 @@ header {
           justify-content: space-between;
           width: 100%;
           max-width: 374px;
-          margin: 0 auto 32px; } }
+          margin: 0 auto 32px;
+          order: 2; } }
       .product-card-cnt-info .btn-pdf-big {
         max-width: 170px;
         margin-bottom: 48px;
@@ -1585,7 +1599,6 @@ header {
       justify-content: center;
       width: 100%;
       max-width: 584px;
-      order: 1;
       padding: 19px 54px 12px 77px;
       background-color: #D1D3D5;
       border-radius: 4px; }
@@ -1596,7 +1609,8 @@ header {
           margin-bottom: 32px;
           padding: 0;
           border-radius: 0px;
-          background-color: transparent; } }
+          background-color: transparent;
+          order: 1; } }
 
 @media (max-width: 992px) {
   .product-latest {
