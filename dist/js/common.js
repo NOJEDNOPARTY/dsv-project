@@ -120,7 +120,6 @@ var common = {
 		$('.owl-carousel').on('changed.owl.carousel', function(event) {
 			var bLazy = new Blazy({});
 		})
-		$('.owl-carousel').trigger('refresh.owl.carousel');
 		$('.news-list').owlCarousel({
 			loop:true,
 			margin: 22,
@@ -185,6 +184,32 @@ var common = {
 				}
 			}
 		})
+		$('.photos-slider').owlCarousel({
+			loop:true,
+			margin: 70,
+			nav: true,
+			dots: true,
+			lazyLoad: true,
+			center: true,
+			// autoplay:true,
+			// autoplayTimeout: 5000,
+			// autoplayHoverPause:true,
+			responsive:{
+				0:{
+					items:1,
+					center: false,
+					margin: 21,
+				},
+				371:{
+					items:3,
+					center: false,
+					margin: 21,
+				},
+				701:{
+					items:3,
+				}
+			}
+		})
 		$('.about-slider').owlCarousel({
 			loop:true,
 			margin: 0,
@@ -201,6 +226,7 @@ var common = {
 			}
 		})
 			
+		$('.owl-carousel').trigger('refresh.owl.carousel');
 	}
 };
 
