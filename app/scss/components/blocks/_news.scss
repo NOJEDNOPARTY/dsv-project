@@ -146,4 +146,89 @@
             }
         }
     }
+    & .article-desc {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        margin-bottom: 16px;
+        font-family: 'HelveticaNeueCyr-Roman';
+        font-size: 18px;
+        line-height: 140%;
+        color: #616161;
+    }
+    &-no-img {
+        & .article-cnt {
+            & .article-title {margin-bottom: 17px;}
+        }
+    }
+}
+
+.article-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 460px;
+    margin-bottom: 6px;
+    overflow: hidden;
+    & img {width: 100%;}
+}
+.article-card {
+    &-date {
+        position: relative;
+        width: 100%;
+        max-width: 170px;
+        margin: 0 auto 29px;
+        padding-bottom: 12px;
+        font-family: 'HelveticaNeueCyr-Roman';
+        font-size: 18px;
+        line-height: 28px;
+        text-align: center;
+        color: #C4C4C4;
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background: rgba(0, 0, 0, 0.4);
+        }
+    }
+    &-title {
+        width: 100%;
+        max-width: 970px;
+        margin: 0 auto 41px;
+        font-family: 'HelveticaNeueCyr-Bold';
+        font-size: 32px;
+        line-height: 48px;
+        text-align: center;
+        color: #00877C;
+    }
+    &-cnt{
+        padding-bottom: 103px;
+        & p {
+            width: 100%;
+            max-width: 970px;
+            margin: 0 auto;
+            font-family: 'HelveticaNeueCyr-Roman';
+            font-size: 14px;
+            line-height: 22px;
+            color: #616161;
+            &:not(:last-child) {margin-bottom: 22px;}
+            & span {font-family: 'HelveticaNeueCyr-Bold';}
+        }
+        & h4 {
+            width: 100%;
+            max-width: 970px;
+            margin: 34px auto 31px;
+            font-family: 'HelveticaNeueCyr-Roman';
+            font-size: 24px;
+            line-height: 38px;
+            text-align: center;
+            color: #616161;
+        }
+    }
 }

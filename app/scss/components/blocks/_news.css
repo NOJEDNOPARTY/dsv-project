@@ -1,0 +1,295 @@
+.news-list-block {
+  padding: 70px 0 25px;
+}
+@media (max-width: 992px) {
+  .news-list-block {
+    padding: 0 0 66px;
+  }
+}
+.news-list-block .wrapper {
+  overflow: hidden;
+}
+.news-list-block .article-img {
+  position: relative;
+}
+.news-list-block .article-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  transition: 0.3s ease;
+}
+.news-list-block .article-img img {
+  transition: 0.3s ease;
+}
+.news-list-block .article-img:hover::before {
+  opacity: 1;
+}
+.news-list-block .article-img:hover img {
+  transform: scale(1.15);
+}
+.news-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 26px;
+}
+.news-head .title {
+  margin-bottom: 0px;
+}
+.news-head .news-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "HelveticaNeueCyr-Roman";
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: 0.4px;
+  color: #616161;
+  transition: 0.3s ease;
+}
+@media (max-width: 767px) {
+  .news-head .news-more {
+    display: none;
+  }
+}
+.news-head .news-more svg path {
+  transition: 0.3s ease;
+}
+.news-head .news-more:hover {
+  color: #00877c;
+}
+.news-head .news-more:hover svg path {
+  fill: #00877c;
+}
+.news-list {
+  margin-left: -5px;
+  width: 1180px;
+}
+@media (max-width: 767px) {
+  .news-list {
+    width: 767px;
+  }
+}
+@media (max-width: 700px) {
+  .news-list {
+    width: 699px;
+  }
+}
+@media (max-width: 360px) {
+  .news-list {
+    width: calc(100% + 10px);
+    padding: 0 6px;
+  }
+}
+@media (max-width: 992px) {
+  .news-list-page {
+    padding-top: 17px;
+  }
+}
+.news-list-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  padding-top: 48px;
+}
+@media (max-width: 1150px) {
+  .news-list-content {
+    justify-content: space-around;
+  }
+}
+@media (max-width: 992px) {
+  .news-list-content {
+    padding-top: 24px;
+  }
+}
+.acticle-preview {
+  width: 100%;
+  max-width: 370px;
+  box-shadow: 0px 4px 4px rgba(0, 135, 124, 0.15);
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 0 5px 32px;
+}
+@media (max-width: 360px) {
+  .acticle-preview {
+    max-width: 340px;
+    margin: 0 0 32px;
+  }
+}
+.acticle-preview .article-img {
+  display: block;
+  width: 100%;
+  max-height: 298px;
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+  .acticle-preview .article-img {
+    overflow: hidden;
+    max-height: 200px;
+  }
+}
+.acticle-preview .article-img img {
+  width: 100%;
+}
+.acticle-preview .article-cnt {
+  display: block;
+  width: 100%;
+  padding: 16px 15px;
+}
+@media (max-width: 767px) {
+  .acticle-preview .article-cnt {
+    padding: 7px 15px 24px;
+  }
+}
+.acticle-preview .article-cnt .article-date {
+  padding-bottom: 7px;
+  font-family: "HelveticaNeueCyr-Roman";
+  font-size: 14px;
+  line-height: 14px;
+  color: rgba(0, 0, 0, 0.4);
+}
+@media (max-width: 767px) {
+  .acticle-preview .article-cnt .article-date {
+    padding-bottom: 11px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+.acticle-preview .article-cnt .article-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  height: 76px;
+  margin-bottom: 8px;
+  font-family: "HelveticaNeueCyr-Bold";
+  font-size: 18px;
+  line-height: 26px;
+  color: #616161;
+  transition: 0.3s ease;
+}
+@media (max-width: 767px) {
+  .acticle-preview .article-cnt .article-title {
+    margin-bottom: 13px;
+    line-height: 24px;
+  }
+}
+.acticle-preview .article-cnt .article-title:hover {
+  color: #00877c;
+}
+.acticle-preview .article-cnt .article-link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: "HelveticaNeueCyr-Roman";
+  font-size: 18px;
+  line-height: 18px;
+  color: #00877c;
+  transition: 0.3s ease;
+}
+.acticle-preview .article-cnt .article-link svg {
+  margin-left: 8px;
+}
+.acticle-preview .article-cnt .article-link svg path {
+  transition: 0.3s ease;
+}
+.acticle-preview .article-cnt .article-link:hover {
+  color: #616161;
+}
+.acticle-preview .article-cnt .article-link:hover svg path {
+  fill: #616161;
+}
+.acticle-preview .article-desc {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  margin-bottom: 16px;
+  font-family: "HelveticaNeueCyr-Roman";
+  font-size: 18px;
+  line-height: 140%;
+  color: #616161;
+}
+.acticle-preview-no-img .article-cnt .article-title {
+  margin-bottom: 17px;
+}
+.article-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 460px;
+  margin-bottom: 6px;
+  overflow: hidden;
+}
+.article-banner img {
+  width: 100%;
+}
+.article-card-date {
+  position: relative;
+  width: 100%;
+  max-width: 170px;
+  margin: 0 auto 29px;
+  padding-bottom: 12px;
+  font-family: "HelveticaNeueCyr-Roman";
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  color: #c4c4c4;
+}
+.article-card-date::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.4);
+}
+.article-card-title {
+  width: 100%;
+  max-width: 970px;
+  margin: 0 auto 41px;
+  font-family: "HelveticaNeueCyr-Bold";
+  font-size: 32px;
+  line-height: 48px;
+  text-align: center;
+  color: #00877c;
+}
+.article-card-cnt {
+  padding-bottom: 103px;
+}
+.article-card-cnt p {
+  width: 100%;
+  max-width: 970px;
+  margin: 0 auto;
+  font-family: "HelveticaNeueCyr-Roman";
+  font-size: 14px;
+  line-height: 22px;
+  color: #616161;
+}
+.article-card-cnt p:not(:last-child) {
+  margin-bottom: 22px;
+}
+.article-card-cnt p span {
+  font-family: "HelveticaNeueCyr-Bold";
+}
+.article-card-cnt h4 {
+  width: 100%;
+  max-width: 970px;
+  margin: 34px auto 31px;
+  font-family: "HelveticaNeueCyr-Roman";
+  font-size: 24px;
+  line-height: 38px;
+  text-align: center;
+  color: #616161;
+}
