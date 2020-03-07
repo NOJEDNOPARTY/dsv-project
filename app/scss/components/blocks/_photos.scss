@@ -66,6 +66,8 @@
                 height: 56px;
                 background: rgba(0, 0, 0, 0.4);
                 border-radius: 4px;
+                transition: 0.3s ease;
+                opacity: 0;
                 @media(max-width: 992px) {display: none;}
                 & svg {
                     width: 32px;
@@ -81,7 +83,10 @@
                     z-index: 2;
                     transform: scale(1.32);
                     .photo-cnt {opacity: 1;}
-                    .zoom-photo {transform: scale(0.757);}
+                    .zoom-photo {
+                        transform: scale(0.757);
+                        opacity: 1;
+                    }
                 }
             }
         }

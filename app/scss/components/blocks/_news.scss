@@ -217,6 +217,7 @@
     }
     &-cnt{
         padding-bottom: 103px;
+        &.nopad {padding-bottom: 0;}
         @media(max-width: 700px) {padding-bottom: 32px;}
         & p {
             width: 100%;

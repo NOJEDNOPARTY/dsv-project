@@ -1,6 +1,7 @@
 var common = {
 	init: function() {
 		common.fixNavigation();
+		common.mapFunc();
 		common.main();
 		common.carousel();
 	},
@@ -20,6 +21,22 @@ var common = {
 				fixPanel();
 			}
 		});
+	},
+	mapFunc: function(){
+
+		$('.contacts-list-item-title').click( function(e){
+			e.preventDefault();
+			$(this).closest('.contacts-list-item').toggleClass('active');
+		});
+
+		$('.contact-trigger').click(function(){
+			var mapItem = '.' + $(this).attr('data-map');
+			var img = $(this).attr('data-img');
+			var title = $(this).attr('data-title');
+			var cnt = $(this).attr('data-cnt');
+			$('.contacts-map').find(mapItem).addClass('active')
+		});
+
 	},
 	main: function(){
 
