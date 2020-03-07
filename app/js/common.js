@@ -15,7 +15,7 @@ var common = {
 				$('body').css({'margin-top':0})
 			}
 		};
-		fixPanel();
+		if($(window).width() < 993) {fixPanel();}
 		$(window).scroll(function() {
 			if($(window).width() < 993) {
 				fixPanel();
@@ -26,21 +26,78 @@ var common = {
 
 		$('.contacts-list-item-title').click( function(e){
 			e.preventDefault();
+			$('.contacts-list-item').removeClass('active')
 			$(this).closest('.contacts-list-item').toggleClass('active');
 		});
 
 		$('.contact-trigger').click(function(){
-			var mapItem = '.' + $(this).attr('data-map');
+			// data info
+			$('.contacts-list-item-cnt-row').removeClass('active')
+			$(this).addClass('active');
+			var mapItem = '.contacts-map .' + $(this).attr('data-map');
+			var mapItemCnt = $(this).find('.contacts-row-content').clone();
 			var img = $(this).attr('data-img');
-			var title = $(this).attr('data-title');
-			var cnt = $(this).attr('data-cnt');
-			$('.contacts-map').find(mapItem).addClass('active')
+			// popup element
+			var popupCnt = $('.contacts-map .map-popup .map-popup-cnt');
+			var popupImg = $('.contacts-map .map-popup .popup-img img');
+			
+			$('.map-item').removeClass('active'); // clear active view of map district
+			$(popupCnt).empty(); // remove all of popup content
+			mapItemCnt.appendTo(popupCnt); // add new content to popup
+			popupImg.attr('src', img) // add new img for popup
+
+			$(mapItem).addClass('active'); // show at map active district
+			$('.contacts-map .map-popup').addClass('active'); // show popup with current info
 		});
+
+		$('.close-popup').click( function(e){
+			$(this).closest('.map-popup').removeClass('active');
+			$('.map-item').removeClass('active');
+		});
+
+		
+		if($(window).width() < 768) {
+			$('.contact-trigger').click(function(){
+				var destination = $('#contactsMap').offset().top;
+				$('html').animate({ scrollTop: destination - 100 }, 1100);
+			});
+		}
+
+		$('.contacts-map .map-item').click(function(){
+			// data info
+			var mapItem = '.contacts-map .' + $(this).attr('data-map');
+			var contentItem =  $('.contacts-list-item-cnt-row[data-map="' + $(this).attr('data-map') +'"')
+
+			$('.contacts-list-item-cnt-row').removeClass('active')
+			$(contentItem).addClass('active');
+			var mapItemCnt = contentItem.find('.contacts-row-content').clone();
+			
+			var img = contentItem.attr('data-img');
+
+			// popup element
+			var popupCnt = $('.contacts-map .map-popup .map-popup-cnt');
+			var popupImg = $('.contacts-map .map-popup .popup-img img');
+			
+			$('.map-item').removeClass('active'); // clear active view of map district
+			$(popupCnt).empty(); // remove all of popup content
+			mapItemCnt.appendTo(popupCnt); // add new content to popup
+			popupImg.attr('src', img) // add new img for popup
+
+			$(mapItem).addClass('active'); // show at map active district
+			$('.contacts-map .map-popup').addClass('active'); // show popup with current info
+		});
+		$('.close-popup').click( function(e){
+			$(this).closest('.map-popup').removeClass('active');
+			$('.map-item').removeClass('active');
+		});
+		
 
 	},
 	main: function(){
 
 		var bLazy = new Blazy({});
+
+		$('.phone-mask').mask("+380(99)999-99-99");
 
 				
 		$('.menu-trigger').click(function(event){
