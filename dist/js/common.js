@@ -95,6 +95,26 @@ var common = {
 	},
 	main: function(){
 
+		$('.btn-more').click(function(event){
+			event.preventDefault();
+			var openText = $(this).attr('data-open-text');
+			var closeText = $(this).attr('data-close-text');
+			if($(this).hasClass('active') == false) {
+				$(this).addClass('active');
+				$(this).closest('.wrapper').find('.more-content').addClass('active');
+				$(this).text(openText);
+				var bLazy = new Blazy({});
+			}else {
+				$(this).removeClass('active');
+				$(this).closest('.wrapper').find('.more-content').removeClass('active');
+				$(this).text(closeText)
+			}
+		})
+
+		setTimeout(function(){
+			$('.preloader').removeClass('active');
+		}, 3000);
+		
 		var bLazy = new Blazy({});
 
 		$('.phone-mask').mask("+380(99)999-99-99");
