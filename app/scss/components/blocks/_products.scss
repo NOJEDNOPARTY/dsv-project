@@ -175,8 +175,10 @@
             width: calc(100% - 20px);
             z-index: 10;
             padding: 25px 10px 10px;
-            overflow: scroll;
-            &.open {display: block;}
+            &.open {
+                display: block;
+                & .table-block {overflow-y: scroll;}
+            }
         }
         & .table-cnt-close {
             position: absolute;

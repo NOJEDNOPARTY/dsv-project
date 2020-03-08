@@ -86,6 +86,7 @@
         width: 100%;
         max-height: 298px;
         overflow: hidden;
+        border-radius: 4px;
         @media(max-width: 767px) {
             overflow: hidden;
             max-height: 200px;
@@ -218,7 +219,10 @@
     &-cnt{
         padding-bottom: 103px;
         &.nopad {padding-bottom: 0;}
-        @media(max-width: 700px) {padding-bottom: 32px;}
+        @media(max-width: 700px) {
+            padding-bottom: 32px;
+            &.nopad {padding-bottom: 32px;}
+        }
         & p {
             width: 100%;
             max-width: 970px;

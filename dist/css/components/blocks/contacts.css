@@ -197,13 +197,13 @@
     color: #616161; }
   .form-field-wrap .form-field {
     width: 100%;
-    padding: 9px 16px;
+    padding: 0 16px;
     background: #FFFFFF;
     border: 2px solid #DCDCDC;
     border-radius: 4px;
     font-family: 'HelveticaNeueCyr-Roman';
     font-size: 18px;
-    line-height: 18px;
+    line-height: 38px;
     color: #C4C4C4;
     transition: 0.3s ease; }
     .form-field-wrap .form-field:focus {
@@ -211,7 +211,9 @@
   .form-field-wrap.form-field-textarea {
     max-width: 100%; }
     .form-field-wrap.form-field-textarea textarea {
-      height: 70px; }
+      padding: 9px 16px;
+      height: 70px;
+      line-height: 18px; }
 
 .form-reset {
   display: flex;

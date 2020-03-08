@@ -200,13 +200,13 @@
     }
     & .form-field {
         width: 100%;
-        padding: 9px 16px;
+        padding: 0 16px;
         background: #FFFFFF;
         border: 2px solid #DCDCDC;
         border-radius: 4px;
         font-family: 'HelveticaNeueCyr-Roman';
         font-size: 18px;
-        line-height: 18px;
+        line-height: 38px;
         color: #C4C4C4;
         transition: 0.3s ease;
         &:focus {border: 2px solid #00877C;}
@@ -214,7 +214,9 @@
     &.form-field-textarea{
         max-width: 100%;
         & textarea {
+            padding: 9px 16px;
             height: 70px;
+            line-height: 18px;
         }
     } 
 }

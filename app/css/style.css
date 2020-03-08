@@ -580,10 +580,28 @@ header {
     header nav ul .nav-link-btn > span a:hover {
       border: 1px solid #BCCF00;
       color: #BCCF00; } }
+      header nav ul .nav-first {
+        position: relative; }
+        @media (min-width: 993px) {
+          header nav ul .nav-first > span {
+            height: 18px; }
+          header nav ul .nav-first.about-menu::before {
+            bottom: -23px !important; }
+          header nav ul .nav-first.about-menu > span {
+            margin-top: 1px; } }
+        @media (min-width: 1101px) {
+          header nav ul .nav-first > span {
+            height: 18px; }
+          header nav ul .nav-first.about-menu::before {
+            bottom: -23px !important; }
+          header nav ul .nav-first.about-menu > span {
+            margin-top: -1px; } }
       @media (min-width: 992px) {
-        header nav ul li.active {
+        header nav ul li.active,
+        header nav ul .nav-first:hover {
           position: relative; }
-          header nav ul li.active::before {
+          header nav ul li.active::before,
+          header nav ul .nav-first:hover::before {
             content: "";
             position: absolute;
             left: calc(50% - 20px);
@@ -709,7 +727,8 @@ header {
       .header-left.menu-open form {
         opacity: 0; } }
   .header-left .logo {
-    margin-right: 23px; }
+    margin-right: 23px;
+    transition: 0.3s ease; }
     .header-left .logo svg path {
       transition: 0.3s ease; }
     @media (min-width: 992px) {
@@ -717,7 +736,18 @@ header {
         fill: #BCCF00; } }
     @media (max-width: 992px) {
       .header-left .logo {
-        display: none; } }
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: 0.4s ease;
+        max-width: 40px; }
+        .header-left .logo svg {
+          width: 40px;
+          height: 47px; }
+        .header-left .logo.hidden {
+          opacity: 0;
+          z-index: -1; } }
   .header-left form {
     padding-left: 17px; }
     @media (max-width: 992px) {
@@ -914,9 +944,6 @@ header {
   transition: 0.4s ease; }
   .header-slogan-mobile.hidden {
     opacity: 0; }
-  @media (max-width: 992px) {
-    .header-slogan-mobile {
-      display: flex; } }
 
 .nav-top {
   display: none;
@@ -1344,10 +1371,11 @@ header {
       transform: translate(-50%);
       width: calc(100% - 20px);
       z-index: 10;
-      padding: 25px 10px 10px;
-      overflow: scroll; }
+      padding: 25px 10px 10px; }
       .product-table.open {
-        display: block; } }
+        display: block; }
+        .product-table.open .table-block {
+          overflow-y: scroll; } }
   .product-table .table-cnt-close {
     position: absolute;
     top: 8px;
@@ -1776,7 +1804,8 @@ header {
     display: block;
     width: 100%;
     max-height: 298px;
-    overflow: hidden; }
+    overflow: hidden;
+    border-radius: 4px; }
     @media (max-width: 767px) {
       .acticle-preview .article-img {
         overflow: hidden;
@@ -1906,7 +1935,9 @@ header {
     padding-bottom: 0; }
   @media (max-width: 700px) {
     .article-card-cnt {
-      padding-bottom: 32px; } }
+      padding-bottom: 32px; }
+      .article-card-cnt.nopad {
+        padding-bottom: 32px; } }
   .article-card-cnt p {
     width: 100%;
     max-width: 970px;
@@ -2014,7 +2045,8 @@ header {
     width: 100%;
     background-color: #FFFFFF;
     padding: 17px 12px 14px 8px;
-    transition: 0.3s ease; }
+    transition: 0.3s ease;
+    border-radius: 0 0 4px 4px; }
     @media (max-width: 767px) {
       .videos-item .videos-cnt {
         padding: 22px 12px 7px 10px; } }
@@ -2403,7 +2435,7 @@ header {
       transition: 0.1s ease; }
       @media (max-width: 992px) {
         .photos-slider-wrap .photos-slider .photos-slider-item .photo-cnt {
-          display: none; } }
+          opacity: 1; } }
     .photos-slider-wrap .photos-slider .photos-slider-item .zoom-photo {
       position: absolute;
       top: 16px;
@@ -2633,13 +2665,13 @@ header {
     color: #616161; }
   .form-field-wrap .form-field {
     width: 100%;
-    padding: 9px 16px;
+    padding: 0 16px;
     background: #FFFFFF;
     border: 2px solid #DCDCDC;
     border-radius: 4px;
     font-family: 'HelveticaNeueCyr-Roman';
     font-size: 18px;
-    line-height: 18px;
+    line-height: 38px;
     color: #C4C4C4;
     transition: 0.3s ease; }
     .form-field-wrap .form-field:focus {
@@ -2647,7 +2679,9 @@ header {
   .form-field-wrap.form-field-textarea {
     max-width: 100%; }
     .form-field-wrap.form-field-textarea textarea {
-      height: 70px; }
+      padding: 9px 16px;
+      height: 70px;
+      line-height: 18px; }
 
 .form-reset {
   display: flex;

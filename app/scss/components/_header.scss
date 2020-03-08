@@ -83,7 +83,25 @@ header {
                     }
                 }
             }
-            & li.active {
+            & .nav-first {
+                position: relative;
+                @media(min-width: 993px) {
+                    &  > span {height: 18px;}
+                    &.about-menu  {
+                        &::before {bottom: -23px !important;}
+                        & > span {margin-top: 1px;}
+                    }
+                }
+                @media(min-width: 1101px) {
+                    &  > span {height: 18px;}
+                    &.about-menu  {
+                        &::before {bottom: -23px !important;}
+                        & > span {margin-top: -1px;}
+                    }
+                }
+            }
+            & li.active,
+            & .nav-first:hover {
                 @media(min-width: 992px) {
                     position: relative;
                     &::before {
@@ -230,11 +248,27 @@ header {
     }
     & .logo {
         margin-right: 23px;
+        transition: 0.3s ease;
         & svg path {transition: 0.3s ease;}
         @media(min-width: 992px){ 
             &:hover svg path {fill: #BCCF00;}
         }
-        @media(max-width: 992px) {display: none;}
+        @media(max-width: 992px) {
+            position: absolute;
+            z-index: 1;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: 0.4s ease;
+            max-width: 40px;
+            & svg {
+                width: 40px;
+                height: 47px;
+            }
+            &.hidden {
+                opacity: 0;
+                z-index: -1;
+            }
+        }
     }
     & form {
         padding-left: 17px;
@@ -445,7 +479,7 @@ header {
     transform: translateX(-50%);
     transition: 0.4s ease;
     &.hidden {opacity: 0;}
-    @media(max-width: 992px) {display: flex;}
+    // @media(max-width: 992px) {display: flex;}
 }
 .nav-top {
     display: none;

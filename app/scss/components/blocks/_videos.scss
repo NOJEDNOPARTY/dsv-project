@@ -85,6 +85,7 @@
     background-color: #FFFFFF;
     padding: 17px 12px 14px 8px;
     transition: 0.3s ease;
+    border-radius: 0 0 4px 4px;
     @media(max-width:767px) { padding: 22px 12px 7px 10px; }
     & span {
       display: -webkit-box;
