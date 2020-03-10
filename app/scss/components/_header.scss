@@ -536,6 +536,8 @@ header {
             }
             & svg {
                 display: block;
+                border-radius: 50%;
+                border: 2px solid #616161;
                 path {fill: #616161;}
             }
             &.mobile-links {

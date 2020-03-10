@@ -113,7 +113,7 @@ var common = {
 
 		setTimeout(function(){
 			$('.preloader').removeClass('active');
-		}, 3000);
+		}, 1500);
 		
 		var bLazy = new Blazy({});
 

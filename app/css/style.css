@@ -1039,7 +1039,9 @@ header {
       header nav ul li.active > span > svg {
         transform: rotate(-90deg); }
       header nav ul li svg {
-        display: block; }
+        display: block;
+        border-radius: 50%;
+        border: 2px solid #616161; }
         header nav ul li svg path {
           fill: #616161; }
       header nav ul li.mobile-links {
@@ -1845,7 +1847,7 @@ header {
     width: 100%;
     max-height: 298px;
     overflow: hidden;
-    border-radius: 4px; }
+    border-radius: 4px 0; }
     @media (max-width: 767px) {
       .acticle-preview .article-img {
         overflow: hidden;

@@ -86,7 +86,7 @@
         width: 100%;
         max-height: 298px;
         overflow: hidden;
-        border-radius: 4px;
+        border-radius: 4px 0;
         @media(max-width: 767px) {
             overflow: hidden;
             max-height: 200px;
