@@ -17,13 +17,15 @@
   .contacts-form {
     width: 100%;
     max-width: 1169px;
-    margin: 0 auto;
+    margin: 0 auto 120px;
     padding: 48px 80px 30px;
     background: rgba(229, 229, 229, 0.22);
     border-radius: 20px; }
     @media (max-width: 992px) {
       .contacts-form {
-        padding: 40px 0px; } }
+        margin-bottom: 40px;
+        padding: 40px 0px;
+        border-radius: 0; } }
     .contacts-form form {
       display: flex;
       align-items: flex-start;
