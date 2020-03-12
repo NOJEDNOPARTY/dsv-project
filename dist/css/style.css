@@ -1931,6 +1931,7 @@ header {
   align-items: center;
   justify-content: center;
   width: 100%;
+  max-height: 460px;
   margin-bottom: 6px;
   overflow: hidden; }
   .article-banner img {
