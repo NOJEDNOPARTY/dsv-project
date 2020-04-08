@@ -9,17 +9,15 @@ var common = {
 		function fixPanel() {
 			if ($(window).scrollTop() > 0) {
 				$('header').addClass('fixed');
-				$('body').css({'margin-top':$('header').height()})
+				$('body').css({'margin-top':$('header').outerHeight()})
 			}else {
 				$('header').removeClass('fixed')
 				$('body').css({'margin-top':0})
 			}
 		};
-		if($(window).width() < 993) {fixPanel();}
+		fixPanel();
 		$(window).scroll(function() {
-			if($(window).width() < 993) {
-				fixPanel();
-			}
+			fixPanel();
 		});
 	},
 	mapFunc: function(){
