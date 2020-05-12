@@ -2,12 +2,20 @@ header {
     position: relative;
     padding: 23px 0;
     background-color: #00877C;
+    transition: 0.2s linear;
     &.fixed {
         position: fixed;
         top: 0;
         left: 0;
         z-index: 5;
         width: 100%;
+        padding: 5px 0;
+        & .header-slogan svg {
+            width: 90px;
+            height: auto;
+        }
+        & nav ul li.active::before, 
+        & nav ul .nav-first:hover::before {bottom: -11px;}
     }
     @media(max-width: 992px) {padding: 0;}
     & .wrapper {
@@ -45,6 +53,7 @@ header {
             align-items: center;
             justify-content: flex-start;
             padding: 0;
+            margin: 0;
             list-style: none;
             & a {
                 font-family: 'HelveticaNeueCyr-Roman';
@@ -462,6 +471,7 @@ header {
 }
 
 .header-slogan{
+    & svg {transition: 0.2s linear;}
     &:nth-child(1) {margin-right: 15px;}
     @media(max-width: 1190px) {
         &:nth-child(1) {margin-right: 9px;}
