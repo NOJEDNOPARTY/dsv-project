@@ -117,7 +117,23 @@ var common = {
 
 		$('.phone-mask').mask("+380(99)999-99-99");
 
-				
+						
+		$('.lang-trigger').hover(function(event){
+			event.preventDefault();
+			$(this).find('.lang-trigger-hidden').toggle();
+			$(this).toggleClass('active');
+		}); 
+
+		
+		// if($(window).width() > 992) {
+		// 	$('.hidden-menu-second li').hover(function(event){
+		// 		event.preventDefault();
+		// 		$(this).find('.hidden-menu-third').slideToggle('slow')
+		// 	}); 	
+		// }
+
+
+
 		$('.menu-trigger').click(function(event){
 			event.preventDefault();
 			$('nav').addClass('open');
