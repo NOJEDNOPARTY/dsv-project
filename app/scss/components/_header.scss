@@ -112,8 +112,8 @@ header {
                     }
                 }
             }
-            & li.active,
-            & .nav-first:hover {
+            & > li.active,
+            & Ю .nav-first:hover {
                 @media(min-width: 993px) {
                     position: relative;
                     &::before {
@@ -147,6 +147,9 @@ header {
                     padding-top: 43px;
                     box-shadow: 1px 4px 4px rgba(22, 109, 158, 0.14);
                     transition: 0.3s linear;
+                    @media (max-width: 1190px) {
+                        padding-top: 33px;
+                    }
                     & > li {
                         display: flex;
                         align-items: center;
@@ -177,20 +180,26 @@ header {
                         display: none;
                         width: 270px;
                         background: #FFFFFF;
-                        min-height: 340px;
-                        max-height: 340px;
-                        overflow-y: scroll;
-                        padding: 16px;
+                        padding: 0;
                         box-shadow: 1px 4px 4px rgba(22, 109, 158, 0.14);
                         @media(min-width: 993px) {
                             &::-webkit-scrollbar {width: 2px;}
                             &::-webkit-scrollbar-track { box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.3);}
                             &::-webkit-scrollbar-thumb {background-color: #00877C;}
                         }
-                        & li {
+                        & > li {
+                            display: flex;
+                            align-items: center;
+                            padding: 0 16px;
+                            height: 40px;
+                            margin: 0;
+                            font-family: 'HelveticaNeueCyr-Bold';
+                            &:hover {
+                                background: #EBEEC6;
+                                color: #616161;
+                            }
                             & > span {
                                 width: 100%;
-                                padding-bottom: 16px;
                             }
                             margin: 0;
                             font-family: 'HelveticaNeueCyr-Bold';
@@ -216,8 +225,16 @@ header {
                             }
                             & .hidden-menu-third {
                                 display: none;
+                                position: absolute;
+                                top: 0;
+                                left: 100%;
+                                z-index: 3;
+                                display: none;
+                                width: 270px;
+                                background: #FFFFFF;
+                                padding: 16px;
+                                box-shadow: 1px 4px 4px rgba(22, 109, 158, 0.14);
                                 padding-bottom: 0;
-                                width: 100%;
                                 & > li:not(:last-child) {padding-bottom: 8px;}
                                 & li {
                                     font-family: 'HelveticaNeueCyr-Roman';
