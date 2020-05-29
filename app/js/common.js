@@ -24,8 +24,12 @@ var common = {
 
 		$('.contacts-list-item-title').click( function(e){
 			e.preventDefault();
-			$('.contacts-list-item').removeClass('active')
-			$(this).closest('.contacts-list-item').toggleClass('active');
+			if($(this).closest('.contacts-list-item').hasClass('active') == true){
+				$(this).closest('.contacts-list-item').toggleClass('active');
+			}else{
+				$('.contacts-list-item').removeClass('active')
+				$(this).closest('.contacts-list-item').toggleClass('active');
+			}
 		});
 
 		$('.contact-trigger').click(function(){
@@ -60,30 +64,56 @@ var common = {
 				$('html').animate({ scrollTop: destination - 100 }, 1100);
 			});
 		}
+		if($(window).width() > 1200){
+			$('.contacts-map .map-item').hover(function(){
+				// data info
+				var mapItem = '.contacts-map .' + $(this).attr('data-map');
+				var contentItem =  $('.contacts-list-item-cnt-row[data-map="' + $(this).attr('data-map') +'"')
 
-		$('.contacts-map .map-item').click(function(){
-			// data info
-			var mapItem = '.contacts-map .' + $(this).attr('data-map');
-			var contentItem =  $('.contacts-list-item-cnt-row[data-map="' + $(this).attr('data-map') +'"')
+				$('.contacts-list-item-cnt-row').removeClass('active')
+				$(contentItem).addClass('active');
+				var mapItemCnt = contentItem.find('.contacts-row-content').clone();
+				
+				var img = contentItem.attr('data-img');
 
-			$('.contacts-list-item-cnt-row').removeClass('active')
-			$(contentItem).addClass('active');
-			var mapItemCnt = contentItem.find('.contacts-row-content').clone();
-			
-			var img = contentItem.attr('data-img');
+				// popup element
+				var popupCnt = $('.contacts-map .map-popup .map-popup-cnt');
+				var popupImg = $('.contacts-map .map-popup .popup-img img');
+				
+				$('.map-item').removeClass('active'); // clear active view of map district
+				$(popupCnt).empty(); // remove all of popup content
+				mapItemCnt.appendTo(popupCnt); // add new content to popup
+				popupImg.attr('src', img) // add new img for popup
 
-			// popup element
-			var popupCnt = $('.contacts-map .map-popup .map-popup-cnt');
-			var popupImg = $('.contacts-map .map-popup .popup-img img');
-			
-			$('.map-item').removeClass('active'); // clear active view of map district
-			$(popupCnt).empty(); // remove all of popup content
-			mapItemCnt.appendTo(popupCnt); // add new content to popup
-			popupImg.attr('src', img) // add new img for popup
+				$(mapItem).addClass('active'); // show at map active district
+				$('.contacts-map .map-popup').addClass('active'); // show popup with current info
+			});
+		}else{
+			$('.contacts-map .map-item').click(function(){
+				// data info
+				var mapItem = '.contacts-map .' + $(this).attr('data-map');
+				var contentItem =  $('.contacts-list-item-cnt-row[data-map="' + $(this).attr('data-map') +'"')
 
-			$(mapItem).addClass('active'); // show at map active district
-			$('.contacts-map .map-popup').addClass('active'); // show popup with current info
-		});
+				$('.contacts-list-item-cnt-row').removeClass('active')
+				$(contentItem).addClass('active');
+				var mapItemCnt = contentItem.find('.contacts-row-content').clone();
+				
+				var img = contentItem.attr('data-img');
+
+				// popup element
+				var popupCnt = $('.contacts-map .map-popup .map-popup-cnt');
+				var popupImg = $('.contacts-map .map-popup .popup-img img');
+				
+				$('.map-item').removeClass('active'); // clear active view of map district
+				$(popupCnt).empty(); // remove all of popup content
+				mapItemCnt.appendTo(popupCnt); // add new content to popup
+				popupImg.attr('src', img) // add new img for popup
+
+				$(mapItem).addClass('active'); // show at map active district
+				$('.contacts-map .map-popup').addClass('active'); // show popup with current info
+			});
+		}
+
 		$('.close-popup').click( function(e){
 			$(this).closest('.map-popup').removeClass('active');
 			$('.map-item').removeClass('active');

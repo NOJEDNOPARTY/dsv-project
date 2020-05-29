@@ -707,8 +707,17 @@ header {
 
 .lang-trigger {
     position: relative;
+    z-index: 2;
     min-width: 50px;
     margin-left: 15px;
+    & svg {
+        transform: rotate(90deg);
+        transition: 0.15s ease;
+        & path {
+            transition: 0.2s ease;
+            fill: #BCCF00;
+        }
+    }
     @media(max-width: 992px) {
         margin: 0 9px;
     }
@@ -741,8 +750,15 @@ header {
     & > span {
         color: #BCCF00;
         transition: 0s;
+        display: flex;
+        align-items: center;
     }
-    &.active > span {background-color: #ffffff;}
+    &.active > span {
+        background-color: #ffffff;
+        & svg {
+        transform: rotate(270deg);
+        }
+    }
     & a {
         color: #616161;
         &:hover {color: #BCCF00;}

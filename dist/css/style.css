@@ -1195,8 +1195,15 @@ header {
 
 .lang-trigger {
   position: relative;
+  z-index: 2;
   min-width: 50px;
   margin-left: 15px; }
+  .lang-trigger svg {
+    transform: rotate(90deg);
+    transition: 0.15s ease; }
+    .lang-trigger svg path {
+      transition: 0.2s ease;
+      fill: #BCCF00; }
   @media (max-width: 992px) {
     .lang-trigger {
       margin: 0 9px; } }
@@ -1226,9 +1233,13 @@ header {
     transition: 0.3s ease; }
   .lang-trigger > span {
     color: #BCCF00;
-    transition: 0s; }
+    transition: 0s;
+    display: flex;
+    align-items: center; }
   .lang-trigger.active > span {
     background-color: #ffffff; }
+    .lang-trigger.active > span svg {
+      transform: rotate(270deg); }
   .lang-trigger a {
     color: #616161; }
     .lang-trigger a:hover {
@@ -1736,7 +1747,7 @@ header {
     font-size: 18px;
     line-height: 28px;
     text-align: center;
-    color: #000000; }
+    color: #00877C; }
   .product-card-cnt {
     display: flex;
     align-items: flex-start;
@@ -1835,7 +1846,6 @@ header {
       width: 100%;
       max-width: 584px;
       padding: 19px 54px 12px 77px;
-      background-color: #D1D3D5;
       border-radius: 4px; }
       .product-card-cnt-img img {
         width: 100%; }
