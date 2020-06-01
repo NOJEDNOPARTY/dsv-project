@@ -113,7 +113,7 @@ header {
                 }
             }
             & > li.active,
-            & Ю .nav-first:hover {
+            & > .nav-first:hover {
                 @media(min-width: 993px) {
                     position: relative;
                     &::before {
@@ -147,6 +147,7 @@ header {
                     padding-top: 43px;
                     box-shadow: 1px 4px 4px rgba(22, 109, 158, 0.14);
                     transition: 0.3s linear;
+                    & li::before {display: none !important;}
                     @media (max-width: 1190px) {
                         padding-top: 33px;
                     }
@@ -188,23 +189,25 @@ header {
                             &::-webkit-scrollbar-thumb {background-color: #00877C;}
                         }
                         & > li {
-                            display: flex;
-                            align-items: center;
-                            padding: 0 16px;
-                            height: 40px;
-                            margin: 0;
-                            font-family: 'HelveticaNeueCyr-Bold';
-                            &:hover {
-                                background: #EBEEC6;
-                                color: #616161;
+                            @media (min-width: 993px) {
+                                display: flex;
+                                align-items: center;
+                                padding: 0 16px;
+                                height: 40px;
+                                margin: 0;
+                                font-family: 'HelveticaNeueCyr-Bold';
+                                &:hover {
+                                    background: #EBEEC6;
+                                    color: #616161;
+                                }
+                                & > span {
+                                    width: 100%;
+                                }   
+                                margin: 0;
+                                font-family: 'HelveticaNeueCyr-Bold';
+                                transition: 0.3s ease;
+                                & a {color: #616161;}
                             }
-                            & > span {
-                                width: 100%;
-                            }
-                            margin: 0;
-                            font-family: 'HelveticaNeueCyr-Bold';
-                            transition: 0.3s ease;
-                            & a {color: #616161;}
                             @media(min-width: 993px){
                                 & svg {
                                     transform: rotate(-90deg);
@@ -225,29 +228,31 @@ header {
                             }
                             & .hidden-menu-third {
                                 display: none;
-                                position: absolute;
-                                top: 0;
-                                left: 100%;
-                                z-index: 3;
-                                display: none;
-                                width: 270px;
-                                background: #FFFFFF;
-                                padding: 16px;
-                                box-shadow: 1px 4px 4px rgba(22, 109, 158, 0.14);
-                                padding-bottom: 0;
-                                & > li:not(:last-child) {padding-bottom: 8px;}
-                                & li {
-                                    font-family: 'HelveticaNeueCyr-Roman';
-                                    transition: 0.3s ease;
-                                    & a {text-transform: none;}
-                                    &:hover {
-                                        & > a {color: #00877C;}
-                                    }
-                                    @media(min-width: 993px){
+                                @media (min-width: 993px) {
+                                    position: absolute;
+                                    top: 0;
+                                    left: 100%;
+                                    z-index: 3;
+                                    display: none;
+                                    width: 270px;
+                                    background: #FFFFFF;
+                                    padding: 16px;
+                                    box-shadow: 1px 4px 4px rgba(22, 109, 158, 0.14);
+                                    padding-bottom: 0;
+                                    & > li:not(:last-child) {padding-bottom: 8px;}
+                                    & li {
+                                        font-family: 'HelveticaNeueCyr-Roman';
+                                        transition: 0.3s ease;
+                                        & a {text-transform: none;}
                                         &:hover {
                                             & > a {color: #00877C;}
                                         }
-                                    }
+                                        @media(min-width: 993px){
+                                            &:hover {
+                                                & > a {color: #00877C;}
+                                            }
+                                        }
+                                    }   
                                 }
                             }
                             &.active {
@@ -560,6 +565,11 @@ header {
 
 
 @media(max-width: 992px) { 
+    header nav > ul {
+        & > li {
+            &:not(:last-child) {margin-bottom: 26px;}
+        }
+    }
     header nav  ul {
         flex-direction: column;
         align-items: flex-start;
@@ -568,7 +578,6 @@ header {
         & li{
             width: 100%;
             margin-right: 0 !important;
-            &:not(:last-child) {margin-bottom: 26px;}
             & > span > svg {transform: rotate(0deg);}
             &.active {
                 & > span > svg {transform: rotate(-90deg);}
@@ -724,7 +733,7 @@ header {
     &-hidden {
         display: none;
         position: absolute;
-        top: 100%;
+        top: calc(100% - 1px);
         left: 50%;
         transform: translateX(-50%);
         width: 100%;
