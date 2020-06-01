@@ -46,7 +46,7 @@ header {
             }
         }
         
-        & .mobile-links,
+        & .mobile-links {display: none !important;}
         & ul li .hidden-menu > li.hidden-menu-title {display: none;}
         @media(min-width: 993px) {
             &  > ul > li > span svg {display: none;}

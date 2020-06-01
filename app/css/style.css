@@ -585,7 +585,8 @@ header {
         header nav.open {
           box-shadow: 4px 8px 8px rgba(22, 109, 158, 0.44);
           transform: translateX(0); } }
-    header nav .mobile-links,
+    header nav .mobile-links {
+      display: none !important; }
     header nav ul li .hidden-menu > li.hidden-menu-title {
       display: none; }
     @media (min-width: 993px) {
@@ -2943,22 +2944,29 @@ header {
 footer {
   background-color: #00877C;
   padding: 19px 0 27px; }
-  @media (max-width: 992px) {
-    footer {
-      display: none; } }
   footer .wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between; }
+    @media (max-width: 1040px) {
+      footer .wrapper {
+        flex-direction: column; } }
     footer .wrapper .footer-left {
       display: flex;
       align-items: center;
       justify-content: flex-start; }
+      @media (max-width: 1040px) {
+        footer .wrapper .footer-left {
+          flex-direction: column; } }
     footer .wrapper .footer-socials {
       display: flex;
       align-items: center;
       justify-content: flex-start;
       padding-right: 55px; }
+      @media (max-width: 1040px) {
+        footer .wrapper .footer-socials {
+          padding-right: 0;
+          margin-bottom: 25px; } }
       footer .wrapper .footer-socials a svg {
         transition: 0.3s ease; }
       footer .wrapper .footer-socials a:hover svg {
@@ -2969,6 +2977,12 @@ footer {
       display: flex;
       align-items: center;
       justify-content: center; }
+      @media (max-width: 1040px) {
+        footer .wrapper .footer-nav-mid {
+          margin-bottom: 25px; } }
+      @media (max-width: 1040px) {
+        footer .wrapper .footer-nav {
+          flex-direction: column; } }
       footer .wrapper .footer-nav a,
       footer .wrapper .footer-nav span {
         font-family: 'HelveticaNeueCyr-Bold';
@@ -2984,6 +2998,10 @@ footer {
             footer .wrapper .footer-nav a:not(:last-child),
             footer .wrapper .footer-nav span:not(:last-child) {
               margin-right: 15px; } }
+          @media (max-width: 1040px) {
+            footer .wrapper .footer-nav a:not(:last-child),
+            footer .wrapper .footer-nav span:not(:last-child) {
+              margin: 0 0 25px; } }
       footer .wrapper .footer-nav a:hover {
         opacity: 0.8; }
 
