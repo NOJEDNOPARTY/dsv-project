@@ -407,7 +407,7 @@ button.ui-button::-moz-focus-inner {
   padding-left: 0px;
   font-family: 'HelveticaNeueCyr-Bold';
   font-size: 62px;
-  line-height: 58px;
+  line-height: 64px;
   text-align: left;
   color: #00877C; }
   .page-title-big::before {
@@ -420,6 +420,22 @@ button.ui-button::-moz-focus-inner {
       letter-spacing: 0.3px;
       font-size: 40px;
       line-height: 40px; } }
+  .page-title-big span.sub-title {
+    display: block;
+    margin-bottom: 20px;
+    padding-left: 0px;
+    font-family: 'HelveticaNeueCyr-Bold';
+    font-size: 24px;
+    line-height: 30px;
+    text-align: left;
+    color: #00877C; }
+    @media (max-width: 992px) {
+      .page-title-big span.sub-title {
+        margin-top: 15px;
+        text-align: center;
+        letter-spacing: 0.3px;
+        font-size: 18px;
+        line-height: 22px; } }
 
 .page-title {
   width: 100%;
@@ -551,7 +567,8 @@ header {
     @media (min-width: 993px) {
       header.fixed {
         padding: 5px 0; }
-        header.fixed .header-slogan svg {
+        header.fixed .header-slogan svg,
+        header.fixed .header-slogan img {
           width: 90px;
           height: auto; }
         header.fixed nav ul li.active::before,
@@ -1012,7 +1029,8 @@ header {
   .header-right {
     display: none; } }
 
-.header-slogan svg {
+.header-slogan svg,
+.header-slogan img {
   transition: 0.2s linear; }
 
 .header-slogan:nth-child(1) {
@@ -1021,7 +1039,8 @@ header {
 @media (max-width: 1190px) {
   .header-slogan:nth-child(1) {
     margin-right: 9px; }
-  .header-slogan svg {
+  .header-slogan svg,
+  .header-slogan img {
     width: 65px;
     height: 39px; } }
 

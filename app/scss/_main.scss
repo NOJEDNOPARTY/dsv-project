@@ -93,7 +93,7 @@
     padding-left: 0px;
     font-family: 'HelveticaNeueCyr-Bold';
     font-size: 62px;
-    line-height: 58px;
+    line-height: 64px;
     text-align: left;
     color: #00877C;
     &::before {display: none;}
@@ -104,6 +104,23 @@
         letter-spacing: 0.3px;
         font-size: 40px;
         line-height: 40px;
+    }
+    span.sub-title {
+        display: block;
+        margin-bottom: 20px;
+        padding-left: 0px;
+        font-family: 'HelveticaNeueCyr-Bold';
+        font-size: 24px;
+        line-height: 30px;
+        text-align: left;
+        color: #00877C;
+        @media(max-width: 992px) {
+            margin-top: 15px;
+            text-align: center;
+            letter-spacing: 0.3px;
+            font-size: 18px;
+            line-height: 22px;
+        }
     }
 }
 .page-title {
