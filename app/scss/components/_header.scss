@@ -50,7 +50,8 @@ header {
         & .mobile-links {display: none !important;}
         & ul li .hidden-menu > li.hidden-menu-title {display: none;}
         @media(min-width: 993px) {
-            &  > ul > li > span svg {display: none;}
+            &  > ul > li > span svg,
+            &  > ul > li > span img {display: none;}
         }
         ul {
             display: flex;
@@ -164,12 +165,14 @@ header {
                         background-color: #ffffff;
                         transition: 0.3s ease;
                         & a {color: #616161;}
-                        & svg {transition: 0.3s ease;}
+                        & svg,
+                        & img {transition: 0.3s ease;}
                         @media(min-width: 993px){
                             &:hover {
                                 background: #EBEEC6;
                                 color: #616161;
-                                & svg {transform: rotate(180deg);}
+                                & svg,
+                                & img {transform: rotate(180deg);}
                                 & .hidden-menu-second {display: block;}
                             }
                         }
@@ -210,14 +213,16 @@ header {
                                 & a {color: #616161;}
                             }
                             @media(min-width: 993px){
-                                & svg {
+                                & svg,
+                                & img  {
                                     transform: rotate(-90deg);
                                     transition: 0.3s ease;
                                     & path {transition: 0.3s ease;}
                                 }
                                 &:hover {
                                     & > a {color: #00877C;}
-                                    & svg {
+                                    & svg,
+                                    & img  {
                                         transform: rotate(180deg);
                                         & path {fill: #00877C;}
                                     }
@@ -257,7 +262,8 @@ header {
                                 }
                             }
                             &.active {
-                                & > span svg {transform: rotate(-90deg);}
+                                & > span svg,
+                                & > span img  {transform: rotate(-90deg);}
                                 .hidden-menu-third {display: block;}
                             }
                         }
@@ -304,7 +310,8 @@ header {
             transform: translateX(-50%);
             transition: 0.4s ease;
             max-width: 40px;
-            & svg {
+            & svg,
+            & img  {
                 width: 40px;
                 height: 47px;
             }
@@ -583,7 +590,8 @@ header {
             margin-right: 0 !important;
             & > span > svg {transform: rotate(0deg);}
             &.active {
-                & > span > svg {transform: rotate(-90deg);}
+                & > span > svg,
+                & > span > img {transform: rotate(-90deg);}
             }
             & svg {
                 display: block;
@@ -767,7 +775,8 @@ header {
     }
     &.active > span {
         background-color: #ffffff;
-        & svg {
+        & svg,
+        & img {
         transform: rotate(270deg);
         }
     }

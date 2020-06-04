@@ -578,9 +578,9 @@ footer {
   flex: 0 0 auto; }
 
 @media (max-width: 767px) {
-  .more-content .more-content-item:nth-child(-n+4) {
+  .more-content .more-content-item:nth-child(n+4) {
     display: none; }
-  .more-content.active .more-content-item:nth-child(-n+4) {
+  .more-content.active .more-content-item:nth-child(n+4) {
     display: block; } }
 
 header {
@@ -637,7 +637,8 @@ header {
     header nav ul li .hidden-menu > li.hidden-menu-title {
       display: none; }
     @media (min-width: 993px) {
-      header nav > ul > li > span svg {
+      header nav > ul > li > span svg,
+      header nav > ul > li > span img {
         display: none; } }
     header nav ul {
       display: flex;
@@ -747,13 +748,15 @@ header {
             transition: 0.3s ease; }
             header nav ul li .hidden-menu > li a {
               color: #616161; }
-            header nav ul li .hidden-menu > li svg {
+            header nav ul li .hidden-menu > li svg,
+            header nav ul li .hidden-menu > li img {
               transition: 0.3s ease; }
             @media (min-width: 993px) {
               header nav ul li .hidden-menu > li:hover {
                 background: #EBEEC6;
                 color: #616161; }
-                header nav ul li .hidden-menu > li:hover svg {
+                header nav ul li .hidden-menu > li:hover svg,
+                header nav ul li .hidden-menu > li:hover img {
                   transform: rotate(180deg); }
                 header nav ul li .hidden-menu > li:hover .hidden-menu-second {
                   display: block; } }
@@ -793,16 +796,20 @@ header {
                 header nav ul li .hidden-menu .hidden-menu-second > li a {
                   color: #616161; } }
             @media (min-width: 993px) {
-              header nav ul li .hidden-menu .hidden-menu-second > li svg {
+              header nav ul li .hidden-menu .hidden-menu-second > li svg,
+              header nav ul li .hidden-menu .hidden-menu-second > li img {
                 transform: rotate(-90deg);
                 transition: 0.3s ease; }
-                header nav ul li .hidden-menu .hidden-menu-second > li svg path {
+                header nav ul li .hidden-menu .hidden-menu-second > li svg path,
+                header nav ul li .hidden-menu .hidden-menu-second > li img path {
                   transition: 0.3s ease; }
               header nav ul li .hidden-menu .hidden-menu-second > li:hover > a {
                 color: #00877C; }
-              header nav ul li .hidden-menu .hidden-menu-second > li:hover svg {
+              header nav ul li .hidden-menu .hidden-menu-second > li:hover svg,
+              header nav ul li .hidden-menu .hidden-menu-second > li:hover img {
                 transform: rotate(180deg); }
-                header nav ul li .hidden-menu .hidden-menu-second > li:hover svg path {
+                header nav ul li .hidden-menu .hidden-menu-second > li:hover svg path,
+                header nav ul li .hidden-menu .hidden-menu-second > li:hover img path {
                   fill: #00877C; }
               header nav ul li .hidden-menu .hidden-menu-second > li:hover .hidden-menu-third {
                 display: block;
@@ -833,7 +840,8 @@ header {
     @media (min-width: 993px) and (min-width: 993px) {
       header nav ul li .hidden-menu .hidden-menu-second > li .hidden-menu-third li:hover > a {
         color: #00877C; } }
-            header nav ul li .hidden-menu .hidden-menu-second > li.active > span svg {
+            header nav ul li .hidden-menu .hidden-menu-second > li.active > span svg,
+            header nav ul li .hidden-menu .hidden-menu-second > li.active > span img {
               transform: rotate(-90deg); }
             header nav ul li .hidden-menu .hidden-menu-second > li.active .hidden-menu-third {
               display: block; }
@@ -875,7 +883,8 @@ header {
         transform: translateX(-50%);
         transition: 0.4s ease;
         max-width: 40px; }
-        .header-left .logo svg {
+        .header-left .logo svg,
+        .header-left .logo img {
           width: 40px;
           height: 47px; }
         .header-left .logo.hidden {
@@ -1134,7 +1143,8 @@ header {
       margin-right: 0 !important; }
       header nav ul li > span > svg {
         transform: rotate(0deg); }
-      header nav ul li.active > span > svg {
+      header nav ul li.active > span > svg,
+      header nav ul li.active > span > img {
         transform: rotate(-90deg); }
       header nav ul li svg {
         display: block;
@@ -1292,7 +1302,8 @@ header {
     align-items: center; }
   .lang-trigger.active > span {
     background-color: #ffffff; }
-    .lang-trigger.active > span svg {
+    .lang-trigger.active > span svg,
+    .lang-trigger.active > span img {
       transform: rotate(270deg); }
   .lang-trigger a {
     color: #616161; }
@@ -1403,6 +1414,16 @@ header {
   max-height: 270px;
   overflow: hidden;
   border-radius: 4px; }
+  .products-item .title-is-new {
+    position: absolute;
+    width: 124px;
+    top: 12px;
+    left: -40px;
+    z-index: 2;
+    border-radius: 0;
+    height: auto;
+    font-size: 9px;
+    line-height: 9px; }
   @media (max-width: 992px) {
     .products-item {
       width: 220px;
@@ -1675,7 +1696,7 @@ header {
           line-height: 14px; } }
     .product-card-head .product-card-headings .card-top-icon {
       width: 100%;
-      max-width: 402px; }
+      max-width: 550px; }
       .product-card-head .product-card-headings .card-top-icon img {
         max-width: 100%; }
       @media (max-width: 992px) {
@@ -1905,12 +1926,20 @@ header {
     .product-card-cnt-img {
       position: relative;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       width: 100%;
       max-width: 584px;
       padding: 19px 54px 12px 77px;
       border-radius: 4px; }
+      .product-card-cnt-img p {
+        margin-bottom: 30px;
+        font-family: 'HelveticaNeueCyr-Medium';
+        font-size: 18px;
+        line-height: 28px;
+        text-align: center;
+        color: #00877C; }
       .product-card-cnt-img img {
         width: 100%; }
       @media (max-width: 992px) {

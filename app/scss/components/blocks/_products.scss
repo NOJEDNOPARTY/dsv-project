@@ -22,6 +22,17 @@
     max-height: 270px;
     overflow: hidden;
     border-radius: 4px;
+    & .title-is-new {
+        position: absolute;
+        width: 124px;
+        top: 12px;
+        left: -40px;
+        z-index: 2;
+        border-radius: 0;
+        height: auto;
+        font-size: 9px;
+        line-height: 9px;
+    }
     @media(max-width: 992px) {
         width: 220px;
         max-height: 220px;
@@ -282,7 +293,7 @@
         }
         & .card-top-icon {
             width: 100%;    
-            max-width: 402px;
+            max-width: 550px;
             & img {max-width: 100%;}
             @media(max-width: 992px) {
                 width: 100%;
@@ -531,13 +542,21 @@
         &-img {
             position: relative;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             width: 100%;
             max-width: 584px;
             padding: 19px 54px 12px 77px;
-            // background-color: #D1D3D5;
             border-radius: 4px;
+            & p {
+                margin-bottom: 30px;
+                font-family: 'HelveticaNeueCyr-Medium';
+                font-size: 18px;
+                line-height: 28px;
+                text-align: center;
+                color: #00877C;
+            }
             & img {width: 100%;}
             @media(max-width: 992px) {
                 margin-bottom: 32px;

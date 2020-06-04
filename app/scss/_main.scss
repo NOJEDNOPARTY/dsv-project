@@ -252,7 +252,7 @@ body {
 footer {flex: 0 0 auto;}
 
 @media(max-width: 767px) {
-    .more-content .more-content-item:nth-child(-n+4) {display: none;}
-    .more-content.active .more-content-item:nth-child(-n+4) {display: block;}
+    .more-content .more-content-item:nth-child(n+4) {display: none;}
+    .more-content.active .more-content-item:nth-child(n+4) {display: block;}
 }
 
