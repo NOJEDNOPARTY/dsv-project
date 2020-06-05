@@ -36,7 +36,12 @@ var common = {
 			// data info
 			$('.contacts-list-item-cnt-row').removeClass('active')
 			$(this).addClass('active');
-			var mapItem = '.contacts-map .' + $(this).attr('data-map');
+
+			// var mapItem = '.contacts-map .' + $(this).attr('data-map');
+			var mapItem = $(this).attr('data-map');
+
+			var mapItemList = mapItem.split(/\s*,\s*/);
+
 			var mapItemCnt = $(this).find('.contacts-row-content').clone();
 			var img = $(this).attr('data-img');
 			// popup element
@@ -47,6 +52,11 @@ var common = {
 			$(popupCnt).empty(); // remove all of popup content
 			mapItemCnt.appendTo(popupCnt); // add new content to popup
 			popupImg.attr('src', img) // add new img for popup
+
+			mapItemList.forEach(function(element){ // show at map active district
+				var mapItemEl = '.contacts-map .' + element;
+				$(mapItemEl).addClass('active')
+			});
 
 			$(mapItem).addClass('active'); // show at map active district
 			$('.contacts-map .map-popup').addClass('active'); // show popup with current info
@@ -68,7 +78,7 @@ var common = {
 			$('.contacts-map .map-item').hover(function(){
 				// data info
 				var mapItem = '.contacts-map .' + $(this).attr('data-map');
-				var contentItem =  $('.contacts-list-item-cnt-row[data-map="' + $(this).attr('data-map') +'"')
+				var contentItem =  $('.contacts-list-item-cnt-row[data-reg="' + $(this).attr('data-map') +'"')
 
 				$('.contacts-list-item-cnt-row').removeClass('active')
 				$(contentItem).addClass('active');
@@ -92,7 +102,7 @@ var common = {
 			$('.contacts-map .map-item').click(function(){
 				// data info
 				var mapItem = '.contacts-map .' + $(this).attr('data-map');
-				var contentItem =  $('.contacts-list-item-cnt-row[data-map="' + $(this).attr('data-map') +'"')
+				var contentItem =  $('.contacts-list-item-cnt-row[data-reg="' + $(this).attr('data-map') +'"')
 
 				$('.contacts-list-item-cnt-row').removeClass('active')
 				$(contentItem).addClass('active');
