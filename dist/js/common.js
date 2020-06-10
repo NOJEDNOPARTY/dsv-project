@@ -197,7 +197,7 @@ var common = {
 			$('.hidden-menu').closest('li').removeClass('active');
 		}); 
 
-		$('nav ul li span svg, nav ul li span img').click(function(event){
+		$('nav ul li span svg, nav ul li span img, nav ul li .product-btn-trigger').click(function(event){
 			event.preventDefault();
 			if($(this).closest('li').hasClass('active') == false){
 				$(this).closest('ul').find('li').removeClass('active');
