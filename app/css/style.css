@@ -652,6 +652,8 @@ header {
       margin: 0;
       list-style: none; }
       header nav ul a {
+        display: block;
+        width: 100%;
         font-family: 'HelveticaNeueCyr-Roman';
         font-size: 14px;
         line-height: 14px;
@@ -728,7 +730,7 @@ header {
           position: absolute;
           top: 100%;
           left: calc(50% - 135px);
-          z-index: 2;
+          z-index: 5;
           display: none;
           background: transparent;
           padding-top: 43px;
